@@ -1,0 +1,6 @@
+.bgLandingRight{
+    background-image: url("../../public/img/dummyImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
