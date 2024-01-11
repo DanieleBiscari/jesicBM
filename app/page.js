@@ -2,17 +2,16 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
-
-import logo from "@/public/img/logo.svg"
-import search from "@/public/img/search.svg"
-import europa from "@/public/img/europe.png"
-import italia from "@/public/img/italia.png"
-import sicilia from "@/public/img/sicilia.png"
-import troina from "@/public/img/troina.png"
-
+import { firstLetterUpper } from "./lib/bmlib";
+import logo from "@/public/img/logo.svg";
+import search from "@/public/img/search.svg";
+import europa from "@/public/img/europe.png";
+import italia from "@/public/img/italia.png";
+import sicilia from "@/public/img/sicilia.png";
+import troina from "@/public/img/troina.png";
 import styles from '@/app/styles/landing.module.css';
+import { ibmPlexSans, roboto } from '@/app/ui/fonts';
 
-import { ibmPlexSans, roboto } from '@/app/ui/fonts'
 
 export default function Home() {
   const cities = ["troina", "marina", "cugina", "sarina"];
@@ -28,18 +27,16 @@ export default function Home() {
         router.replace("/homepage");
       }
     })
-    if(founded){
-
-    } else {
+    if(!founded){
       searchButtonRef.current.classList.add("border-red-600");
       searchButtonRef.current.classList.add("border-2"); 
-    }
+    } 
   }
 
   function handleSuggestionShow(){
     const newSuggestionArray = []
     cities.map((city) => {
-      if(city.includes(searchButtonRef.current.value)){
+      if(city.includes(searchButtonRef.current.value.toLowerCase()) ){
         newSuggestionArray.push(city)
       }
     })
@@ -47,31 +44,31 @@ export default function Home() {
   }
 
   function handleSuggestionClick(suggestion){
-    searchButtonRef.current.value = suggestion;
+    searchButtonRef.current.value = firstLetterUpper(suggestion);
   }
 
-  function handleSuggestionHide() {
+  function handleSuggestionHide(){
+    searchButtonRef.current.classList.remove('border-red-600');
+    searchButtonRef.current.classList.remove('border-green-600');
+    searchButtonRef.current.classList.remove('border-2');
+    
     setTimeout(() => {
       let founded = false;
       cities.map((city) => {
-        if (searchButtonRef.current.value === city) {
+        if ((searchButtonRef.current.value === firstLetterUpper(city)) || (searchButtonRef.current.value === city)) {
           founded = true;
         }
       });
-  
       if (founded) {
-        searchButtonRef.current.classList.remove('border-red-600');
         searchButtonRef.current.classList.add('border-green-600');
         searchButtonRef.current.classList.add('border-2');
       } else {
-        searchButtonRef.current.classList.remove('border-gren-600');
         searchButtonRef.current.classList.add('border-red-600');
         searchButtonRef.current.classList.add('border-2');
+        searchButtonRef.current.value = ""
       }
-  
       setSuggestionArray([]);
     }, 100)
-    
   }
 
 
@@ -104,7 +101,7 @@ export default function Home() {
                       type="text"
                       className="rounded-e-2xl overflow-hidden bg-gray-400 bg-opacity-60 w-full pl-2"
                       ref={searchButtonRef}
-                      placeholder="Inserisci una città proposta"
+                      placeholder="e.g. Troina"
                       onChange={handleSuggestionShow}
                       onClick={handleSuggestionShow}
                       onBlur={handleSuggestionHide}
@@ -117,7 +114,7 @@ export default function Home() {
                           return (<div onClick={() => handleSuggestionClick(suggestion)} 
                                        key={id} 
                                        className={`${styles.suggestion} p-2 cursor-pointer bg-white`}>
-                                          {suggestion}
+                                          {firstLetterUpper(suggestion)}
                                   </div>)
                         })} 
                       </div>
