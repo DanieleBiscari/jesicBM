@@ -120,7 +120,7 @@ export default function LandingPage() {
                 </div>
             </div>
             <div className="mb-12">
-              <BannerLanding />
+              <BannerLanding fromWhat={"landingPage"} />
             </div>
         </div>
 

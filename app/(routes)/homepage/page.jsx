@@ -7,7 +7,7 @@ import Graphs from "./(components)/graphs"
 export default function Homepage(){
     return(
         <main>
-            <section className="flex w-screen h-screen">
+            <section className="flex justify-center w-screen h-screen bg-slate-50">
                 <Presentation />
             </section>
             <section className="flex w-screen h-screen">

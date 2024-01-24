@@ -1,0 +1,36 @@
+.colorBlue{
+    color: var(--blu-troina);
+}
+.bgBlue{
+    background-color: var(--blu-troina);
+}
+
+.colorYellow{
+    color: var(--giallo-troina);
+}
+
+.colorGray{
+    color: var(--grigio-troina);
+}
+
+.colorWhite{
+    color: var(--bianco-troina);
+}
+
+.h1Custom{
+    font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.h1CustomTroina{
+    font-size: clamp(4rem, 6vw, 6rem);
+}
+
+.btnHomepage{
+    border: 2px solid var(--blu-troina);
+}
+
+.btnHomepage:hover{
+    background-color: rgb(248 250 252);
+    color: var(--blu-troina);
+    border: 2px solid var(--blu-troina);
+}
