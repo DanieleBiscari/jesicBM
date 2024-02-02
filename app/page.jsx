@@ -1,13 +1,13 @@
 "use client"
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { firstLetterUpper } from "./lib/bmlib";
+import Image from "next/image";
 import logo from "@/public/img/logo.svg";
 import search from "@/public/img/search.svg";
 import styles from '@/app/styles/landing.module.css';
 import { ibmPlexSans, roboto } from '@/app/ui/fonts';
-import BannerLanding from "./ui/(components)/bannerLanding";
+import BannerLanding from "./ui/components/bannerLanding";
 
 
 export default function LandingPage() {

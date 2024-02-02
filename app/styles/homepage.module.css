@@ -34,3 +34,36 @@
     color: var(--blu-troina);
     border: 2px solid var(--blu-troina);
 }
+
+.bgPresentation{
+    background-image: url("../../public/img/bgPresentation.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blurredDiv{
+    background: rgba(230, 228, 217, 0.03);
+    backdrop-filter: blur(13px);
+}
+
+.languageColor{
+    color:#339abcdf;
+}
+
+.animationON{
+    animation: opacity 1s ease-in;
+}
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.pPresentation{
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+}

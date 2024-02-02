@@ -1,12 +1,16 @@
-import Navbar from "../ui/(components)/navbar"
-import Footer from "../ui/(components)/footer"
+import Navbar from "../ui/components/navbar"
+import Footer from "../ui/components/footer"
 
 export default function HomepageLayout({children}) {
     return (
       <section>
-        <Navbar/>
+        <div className="absolute">
+          <Navbar/>
+        </div>
         {children}
-        <Footer></Footer>
+        <div>
+          <Footer/>
+        </div>
       </section>
     )
   }
