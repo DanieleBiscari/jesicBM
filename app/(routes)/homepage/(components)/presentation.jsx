@@ -30,7 +30,7 @@ const Presentation = ({styles}) => {
                         priority
                     />
                     <h2 className={`${ibmPlexSans.className} font-semibold text-[2rem] mb-8 text-center leading-8`}>attrazione <br /> investimenti</h2>
-                    <Button1 name={"I NOSTRI SERVIZI"} textSize={"1.1rem"}/>
+                    <Button1 name={"I NOSTRI SERVIZI"} textSize={"1.1rem"} borderColor={"white"} textColor={"white"}/>
                 </div>
                 <p className={`${roboto.className} ${styles.blurredDiv} ${styles.animationON} ${styles.pPresentation}  absolute left-[95%] z-10 w-[45vw] h-full pl-8 p-4 rounded-r-2xl p1 ${animationShowed ? "" : "hidden"}`}>
                     Troina, incantevole comune nella provincia di Enna, si distingue per la sua ricca storia e autentica bellezza. 

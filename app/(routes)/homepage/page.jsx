@@ -12,8 +12,8 @@ export default function Homepage(){
             <section className={`${styles.bgPresentation} flex w-screen h-screen`}>
                 <Presentation styles={styles}/>
             </section>
-            <section className="flex w-screen h-screen">
-                <WhyUs />
+            <section className="w-screen h-screen">
+                <WhyUs styles={styles}/>
             </section>
             <section className="flex w-screen h-screen">
                 <OurTeam />
