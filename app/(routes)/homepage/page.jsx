@@ -8,7 +8,7 @@ import styles from '@/app/styles/homepage.module.css';
 
 export default function Homepage(){
     return(
-        <main>
+        <main className="overflow-x-hidden">
             <section className={`${styles.bgPresentation} flex w-screen h-screen`}>
                 <Presentation styles={styles}/>
             </section>

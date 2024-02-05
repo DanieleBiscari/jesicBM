@@ -67,3 +67,65 @@
 .pPresentation{
     font-size: clamp(1rem, 1.8vw, 1.5rem);
 }
+
+
+.circleWhyUs{
+    padding: 2rem;
+    border-radius: 100%;
+    border-width: 4px;
+    border-color: white;
+    width: 12rem;
+    height: 12rem;
+}
+
+.circleWhyUs:hover{
+    background-color: white;
+    color: #13637E;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.opacityAnimation{
+    animation: opacityIn 1s ease;
+}
+
+ @keyframes opacityIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+ }
+
+
+.circleWhyUs:nth-of-type(3){
+    margin-top: -5rem;
+    margin-bottom: -5rem;
+}
+
+.footerWhyUs{
+    background-color: #84833F;
+    color: #13637E;
+}
+
+.animationInfiniteScroll{
+    animation: infiniteScroll 4s linear  infinite;
+    -webkit-animation: infiniteScroll 4s linear infinite; /* Compatibilità con browser vecchi */   
+}
+
+
+@keyframes infiniteScroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-103%);
+    }
+  }
