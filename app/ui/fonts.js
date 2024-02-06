@@ -14,5 +14,6 @@ export const roboto = Roboto({
 
 export const ebGaramond = EB_Garamond({
     subsets: ['latin'],
+    style:["normal", "italic"],
     weight: ["400", "500", "600", "700", "800"]
 })

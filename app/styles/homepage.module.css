@@ -16,9 +16,18 @@
 .colorWhite{
     color: var(--bianco-troina);
 }
+.bgWhite{
+    background-color: var(--bianco-troina);
+}
 
 .h1Custom{
     font-size: clamp(3rem, 5vw, 5rem);
+}
+.h2Custom{
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+.h3Custom{
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 .h1CustomTroina{
@@ -41,6 +50,29 @@
     background-size: cover;
 }
 
+.bgOurTeam{
+    background-color: #E6E4D9;
+}
+
+.btnOurTeam{
+    background-color: #E3E1D6;
+    border-radius: 16.237px;
+    box-shadow: 0px 20px 21.9px -4px rgba(0, 0, 0, 0.07);
+    padding: 1rem 2rem;
+    cursor: default;
+}
+
+.whiterFilter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.516);
+    animation: opacity 1s ease;
+}
+
+
 .blurredDiv{
     background: rgba(230, 228, 217, 0.03);
     backdrop-filter: blur(13px);
@@ -51,6 +83,10 @@
 }
 
 .animationON{
+    animation: opacity 1s ease-in;
+}
+
+.opacityAnim{
     animation: opacity 1s ease-in;
 }
 
@@ -74,6 +110,11 @@
     border-radius: 100%;
     border-width: 4px;
     border-color: white;
+    width: 12rem;
+    height: 12rem;
+}
+
+.circleOurTeam{
     width: 12rem;
     height: 12rem;
 }
