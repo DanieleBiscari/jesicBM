@@ -32,8 +32,8 @@ export default function Homepage(){
             <section className={`${styles.bgOurTeam} w-screen`}>
                 <OurTeam styles={styles} overed={overed} handleLeaveOurTeam={handleLeaveOurTeam} handleOverOurTeam={handleOverOurTeam}/>
             </section>
-            <section className="flex w-screen h-screen">
-                <Trust1 />
+            <section className="w-screen h-screen">
+                <Trust1 styles={styles}/>
             </section>
             <section>
                 <EndSection styles={styles}/>
@@ -43,15 +43,15 @@ export default function Homepage(){
                     width={1920}
                     height={1080}
                     alt="image troina"
-                    className="w-full h-full object-cover"   
+                    className="w-100 h-full object-cover"   
                     />
                 </div>
                 <div className="rotate-180">
                     <EndSection styles={styles}/>   
                 </div>
             </section>
-            <section className="flex w-screen h-screen">
-                <Trust2 />
+            <section className="w-screen h-screen">
+                <Trust2 styles={styles}/>
             </section>
 
             {overed != null ? <div className={`${styles.whiterFilter} z-0`}></div> : <></>}

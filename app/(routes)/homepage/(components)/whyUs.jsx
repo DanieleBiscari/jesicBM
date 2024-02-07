@@ -85,7 +85,7 @@ const WhyUs = ({styles}) => {
                 </div>
             </div>
 
-            <div className="p-[6rem]">
+            <div className="p-[6rem] mt-20">
                 <h1 className={`${ebGaramond.className} ${styles.h1Custom} leading-[1] mb-8`} style={{color: "#F5A400"}}>Perché investire <br />a Troina?</h1>
                 <p className={`${roboto.className} leading-7 mb-12 pe-32 text-[20px]`}>
                     Troina è molto più di una semplice cittadina dove comprare casa. 

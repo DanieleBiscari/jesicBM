@@ -62,6 +62,17 @@
     cursor: default;
 }
 
+.btnOurTrust1{
+    border-radius: 16.237px;
+    box-shadow: 0px 20px 21.9px -4px rgba(0, 0, 0, 0.07);
+    padding: 1rem 2rem;
+    cursor: default;
+}
+
+.bulletLine{
+    list-style-type: "— ";
+}
+
 .whiterFilter{
     position: absolute;
     width: 100%;
