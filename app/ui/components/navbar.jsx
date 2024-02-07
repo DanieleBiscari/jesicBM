@@ -1,7 +1,7 @@
 
 const Navbar = () => {
     return ( 
-        <nav>
+        <nav className="w-[100vw] h-16 bg-orange-600">
             navbar
         </nav>
      );

@@ -4,7 +4,7 @@ import Footer from "../ui/components/footer"
 export default function HomepageLayout({children}) {
     return (
       <section>
-        <div className="absolute">
+        <div className="fixed z-50">
           <Navbar/>
         </div>
         {children}

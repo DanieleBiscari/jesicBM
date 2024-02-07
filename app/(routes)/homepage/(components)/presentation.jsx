@@ -41,7 +41,7 @@ const Presentation = ({styles}) => {
                 </p>
             </div>
         </div>
-        <div className="ml-auto mr-24 mt-8">
+        <div className="ml-auto mr-24 mt-20">
             <button className={`${ebGaramond.className} font-semibold text-[3rem] ${styles.languageColor} flex justify-start`}>Troina (EN)</button>
         </div>
         </>
