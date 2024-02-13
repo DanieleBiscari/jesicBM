@@ -12,11 +12,11 @@ import troinabg from "@/public/img/troinabg2.svg"
 export default function Page(){
     return(
         <main className="overflow-x-hidden relative">
-            <section className="w-screen h-screen">
+            <section className="w-screen h-screen relative">
                 <ServicePresentation styles={styles}/>
             </section>
 
-            <section className="w-screen h-screen">
+            <section className={`w-screen h-screen ${styles.bgWhite}`}>
                 <ServiceWhyUs styles={styles}/>
             </section>
 

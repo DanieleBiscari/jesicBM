@@ -1,0 +1,42 @@
+.bgWhite{
+    background-color: var(--bianco-troina);
+}
+
+.typoPresentation{
+    color: var(--Bianco-Troina, #E6E4D9);
+    font-size: clamp(1.3rem,2vw,3rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+.enfTextPresentation{
+    color: var(--Giallo-Troina, #F5A400);
+    font-size: clamp(1.3rem,2vw,3rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+}
+
+.textLink{
+    color: var(--Bianco-Troina, #E6E4D9);
+    font-size: clamp(1rem,1.3vw,3rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+.imageArrampicata{
+   display: none;
+}
+
+@media (min-width: 1024px) {
+    .imageArrampicata{
+        display: block;
+        background: url("../../public/img/serviceArrampicata.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        mix-blend-mode: lighten;
+    }
+  }
