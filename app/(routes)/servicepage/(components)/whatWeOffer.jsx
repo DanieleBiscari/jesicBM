@@ -1,4 +1,4 @@
-const WhatWeOffer = () => {
+const WhatWeOffer = ({styles}) => {
     return ( 
         <div>what we offer</div>
      );

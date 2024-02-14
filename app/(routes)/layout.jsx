@@ -1,7 +1,7 @@
 import Navbar from "../ui/components/navbar"
 import Footer from "../ui/components/footer"
 
-export default function HomepageLayout({children}) {
+export default function GeneralLayout({children}) {
     return (
       <section>
         <div className="fixed z-50">
