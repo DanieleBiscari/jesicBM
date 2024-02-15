@@ -1,7 +1,7 @@
 "use client";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Image from "next/image";
-import arrowUp from "@/public/img/arrowUp.svg";
+import arrowDown from "@/public/img/arrowDown.svg";
 
 const ServicePresentation = ({ styles }) => {
   return (
@@ -24,10 +24,10 @@ const ServicePresentation = ({ styles }) => {
           <p>I nostri servizi da remoto</p>
           <Image
             className="w-6 h-6"
-            src={arrowUp}
+            src={arrowDown}
             width={32}
             height={32}
-            alt="arrow up"
+            alt="arrow Down"
           ></Image>
         </div>
         <div className="w-full h-[2px] rounded-lg bg-slate-200"></div>
@@ -35,10 +35,10 @@ const ServicePresentation = ({ styles }) => {
           <p>Action plan con BM</p>
           <Image
             className="w-6 h-6"
-            src={arrowUp}
+            src={arrowDown}
             width={32}
             height={32}
-            alt="arrow up"
+            alt="arrow Down"
           ></Image>
         </div>
       </div>

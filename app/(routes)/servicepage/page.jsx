@@ -1,3 +1,4 @@
+"use client"
 import styles from "@/app/styles/servicepage.module.css";
 import stylesHomepage from "@/app/styles/homepage.module.css";
 import ServicePresentation from "./(components)/servicePresentation";
@@ -7,8 +8,10 @@ import ActionPlan from "./(components)/actionPlan";
 import EndSection from "@/app/ui/components/endSection";
 import Image from "next/image";
 import troinabg from "@/public/img/troinabg2.svg";
+import { useState } from "react";
 
 export default function Page() {
+  const [clicked, setClicked] = useState("");
   return (
     <main className="relative overflow-x-hidden">
       <section className="relative h-screen w-screen">
@@ -19,8 +22,8 @@ export default function Page() {
         <ServiceWhyUs styles={styles} />
       </section>
 
-      <section className="h-screen w-screen">
-        <WhatWeOffer styles={styles} />
+      <section className="w-screen">
+        <WhatWeOffer styles={styles} clicked={clicked} setClicked={setClicked} />
       </section>
 
       <section>
@@ -42,6 +45,8 @@ export default function Page() {
       <section className="h-screen w-screen">
         <ActionPlan styles={styles} />
       </section>
+
+      {clicked != "" ? <div className={`${styles.blackerFilter} z-0`}></div> : <></>}
     </main>
   );
 }
