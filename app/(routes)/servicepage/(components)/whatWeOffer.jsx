@@ -6,6 +6,8 @@ import serviceImg2 from "@/public/img/serviceImg2.svg";
 import serviceImg3 from "@/public/img/serviceImg3.png";
 import serviceImg4 from "@/public/img/serviceImg4.png";
 import whatWeOffer from "@/public/img/whatWeOffer.png";
+import videoPlaceholder from "@/public/img/videoPlaceHolder.png";
+import CardServiceInPresence from "./cardServiceInPresence";
 
 const WhatWeOffer = ({ styles, clicked, setClicked }) => {
   function handleClick(name) {
@@ -54,34 +56,103 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
       image: serviceImg4,
     },
   ];
+  const inPresenceServices = {
+    title: "Tour delle case ad 1€",
+    subtitle: "e non solo...",
+    text: ["Traduttore, Kit di pronto soccorso,", "Consulenza & assistenza"],
+    buttonsContent: [
+      {
+        price: 200,
+        dayPeriod: "MEZZA GIORNATA",
+        hour: 4,
+        howManyHouse: 4,
+        importantButton: false,
+      },
+
+      {
+        price: 325,
+        dayPeriod: "TUTTO IL GIORNO",
+        hour: 7,
+        howManyHouse: 7,
+        importantButton: true,
+      },
+    ],
+    footerText: "*fino a 4 persone, con €30 euro in più per ogni altra persona",
+  };
 
   return (
-    <div className="flex h-full w-full columns-2 p-12 gap-8">
-      <div className="flex w-full flex-col lg:w-[60%] justify-center">
-        <h1 className={`${ebGaramond.className} text-gialloTro [font-size:_clamp(1.3rem,3.5vw,3.5rem)] leading-[100%] ml-4`}>
-          <b className=" font-bold">I nostri servizi da remoto</b> <br /> per investire a Troina
-        </h1>
-        <div className="grid h-[80%] w-full items-center justify-items-center gap-4 md:grid-cols-2 lg:gap-0">
-          {services.map((service) => {
-            return (
-              <ServiceModal
-                styles={styles}
-                key={service.title}
-                title={service.title}
-                price={service.price}
-                subtitle={service.subtitle}
-                text={service.text}
-                image={service.image}
-                handleClick={handleClick}
-                clicked={clicked}
-                setClicked={setClicked}
-              />
-            );
-          })}
+    <div>
+      <div className="flex h-full w-full columns-2 gap-8 px-12 py-20 lg:py-40 justify-center">
+        <div className="h-full lg:w-[60%]">
+          <h1
+            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.3rem,3.5vw,3.5rem)] mb-8`}
+          >
+            <b className=" font-bold">I nostri servizi da remoto</b> <br /> per
+            investire a Troina
+          </h1>
+          <div className="grid h-[80%] w-full items-center justify-items-center gap-4 md:grid-cols-2 lg:gap-8">
+            {services.map((service) => {
+              return (
+                <ServiceModal
+                  styles={styles}
+                  key={service.title}
+                  title={service.title}
+                  price={service.price}
+                  subtitle={service.subtitle}
+                  text={service.text}
+                  image={service.image}
+                  handleClick={handleClick}
+                  clicked={clicked}
+                  setClicked={setClicked}
+                />
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="hidden w-[30%] justify-center lg:flex">
+          <Image
+            src={whatWeOffer}
+            alt="what we offer image"
+            height={620}
+            width={1200}
+            className="object-cover mix-blend-screen rounded-3xl"
+          ></Image>
         </div>
       </div>
-      <div className="hidden w-[40%] lg:flex justify-center">
-        <Image src={whatWeOffer} alt="what we offer image" height={620} width={1200} className=" aspect-[9/16] object-contain mix-blend-screen"></Image>
+
+      <div className="flex w-full columns-2 gap-8 px-12 pb-20 lg:pb-40">
+        <div className="hidden w-[40%] items-center justify-center lg:flex">
+          {/* cancellami */}
+          <div>questo dovrà essere un video -{"->"}</div>
+          {/* cancellami */}
+          <Image
+            src={videoPlaceholder}
+            alt="what we offer image"
+            height={620}
+            width={1200}
+            className="aspect-square w-[80%]"
+          ></Image>
+        </div>
+
+        <div className="flex w-full flex-col  lg:w-[60%]">
+          <h1
+            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.3rem,3.5vw,3.5rem)]`}
+          >
+            <b className=" font-bold">I nostri servizi in presenza</b> <br />
+            per investire a Troina
+          </h1>
+          <div className="">
+            <CardServiceInPresence
+              styles={styles}
+              title={inPresenceServices.title}
+              buttonsContent={inPresenceServices.buttonsContent}
+              subtitle={inPresenceServices.subtitle}
+              text={inPresenceServices.text}
+              footerText={inPresenceServices.footerText}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

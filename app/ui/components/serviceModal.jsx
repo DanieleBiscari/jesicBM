@@ -93,10 +93,10 @@ const ServiceModal = ({
     );
   } else {
     return (
-      <div className="h-full w-full overflow-hidden rounded-[52px] bg-bluTro p-8 text-biancoTro shadow-xl md:h-[65%] lg:w-[90%] min-h-[15rem] max-h-[20rem] md:max-h-full">
+      <div className="h-full max-h-[20rem] min-h-[15rem] w-full overflow-hidden rounded-[52px] bg-bluTro p-8 text-biancoTro shadow-xl md:h-[65%] lg:h-full lg:w-[90%]">
         <div className=" h-[90%] w-full overflow-hidden">
           <h1
-            className={`${ebGaramond.className} mb-2 font-bold [font-size:_clamp(1.2rem,2.8vw,2.8rem)]`}
+            className={`${ebGaramond.className} mb-4 font-bold [font-size:_clamp(1.2rem,2.8vw,2.8rem)] leading-[1]`}
           >
             {title}
           </h1>

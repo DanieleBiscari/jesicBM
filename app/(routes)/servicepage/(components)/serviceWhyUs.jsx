@@ -6,8 +6,8 @@ import serviceTree2 from "@/public/img/serviceTree2.svg";
 
 const ServiceWhyUs = ({ styles }) => {
   return (
-    <div className="flex h-full columns-2 flex-col px-4 py-24 lg:flex-row">
-      <div className="mr-auto flex w-1/2 flex-col items-center">
+    <div className="flex h-full columns-2 flex-col px-4 py-24 lg:flex-row gap-20">
+      <div className="mr-auto flex lg:w-1/2 flex-col items-center">
         <div>
           <h1
             className={`${ibmPlexSans.className} text-bluTro mb-6 font-[700] opacity-50 [font-size:_clamp(1.2rem,2vw,2rem)]`}
@@ -19,7 +19,7 @@ const ServiceWhyUs = ({ styles }) => {
             width={390}
             height={743}
             alt="Immagine di albero con elementi di servizi offerti"
-            className="w-[28.8rem]"
+            className="w-full lg:w-[28.8rem]"
           />
         </div>
       </div>
