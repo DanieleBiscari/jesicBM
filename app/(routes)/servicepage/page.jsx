@@ -14,27 +14,27 @@ export default function Page() {
   const [clicked, setClicked] = useState("");
   return (
     <main className="relative overflow-x-hidden">
-      <section className="relative h-screen w-screen">
+      <section className="relative py-48">
         <ServicePresentation styles={styles} />
       </section>
 
-      <section className={`min-h-screen w-screen ${styles.bgWhite}`}>
+      <section className={`min-h-screen  ${styles.bgWhite}`}>
         <ServiceWhyUs styles={styles} />
       </section>
 
-      <section className="w-screen">
+      <section className="">
         <WhatWeOffer styles={styles} clicked={clicked} setClicked={setClicked} />
       </section>
 
       <section>
         <EndSection styles={stylesHomepage} />
-        <div className="h-[50vh] w-screen">
+        <div className="h-[50vh]">
           <Image
             src={troinabg}
             width={1920}
             height={1080}
             alt="image troina"
-            className="w-100 h-full object-cover"
+            className=" h-full object-cover"
           />
         </div>
         <div className="rotate-180">
@@ -42,7 +42,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="h-screen w-screen">
+      <section className="">
         <ActionPlan styles={styles} />
       </section>
 

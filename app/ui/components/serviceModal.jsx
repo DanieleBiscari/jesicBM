@@ -17,9 +17,9 @@ const ServiceModal = ({
   if (clicked === title) {
     return (
       <div
-        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex h-[80vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:py-8`}
+        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex h-[85vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:py-8`}
       >
-        <div className="mx-auto mb-4 cursor-pointer">
+        <div className="z-10 mx-auto mb-8 cursor-pointer p-2">
           <Image
             src={arrowDown}
             alt="arrow down"
@@ -29,9 +29,9 @@ const ServiceModal = ({
             onClick={() => handleClick("")}
           ></Image>
         </div>
-        <div className="flex h-full w-full flex-col items-center justify-center gap-8 lg:flex-row lg:gap-0 ">
-          <div className="flex w-full justify-center text-biancoTro lg:w-1/2">
-            <div className="flex w-full flex-col gap-4 lg:w-[65%] lg:gap-8">
+        <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-0">
+          <div className=" text-biancoTro lg:w-1/2">
+            <div className="flex w-full flex-col gap-4 lg:w-[90%] lg:gap-8">
               <h1
                 className={`${ebGaramond.className} font-bold [font-size:_clamp(1.2rem,2.8vw,2.8rem)]`}
               >
@@ -85,7 +85,7 @@ const ServiceModal = ({
             <Image
               src={image}
               alt={`image of service ${title}`}
-              className={`object-cover ${title.includes("Platinum") ? " mix-blend-screen" : " "}`}
+              className={`mx-auto object-contain lg:max-h-full lg:max-w-full lg:object-cover ${title.includes("Platinum") ? " mix-blend-screen" : " "}`}
             ></Image>
           </div>
         </div>
@@ -96,7 +96,7 @@ const ServiceModal = ({
       <div className="h-full max-h-[20rem] min-h-[15rem] w-full overflow-hidden rounded-[52px] bg-bluTro p-8 text-biancoTro shadow-xl md:h-[65%] lg:h-full lg:w-[90%]">
         <div className=" h-[90%] w-full overflow-hidden">
           <h1
-            className={`${ebGaramond.className} mb-4 font-bold [font-size:_clamp(1.2rem,2.8vw,2.8rem)] leading-[1]`}
+            className={`${ebGaramond.className} mb-4 font-bold leading-[1] [font-size:_clamp(1.2rem,2.8vw,2.8rem)]`}
           >
             {title}
           </h1>

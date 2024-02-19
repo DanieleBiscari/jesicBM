@@ -26,18 +26,18 @@ export default function Homepage(){
             <section className={`${styles.bgPresentation} flex w-screen h-screen`}>
                 <Presentation styles={styles}/>
             </section>
-            <section className="w-screen h-screen">
+            <section className="">
                 <WhyUs styles={styles}/>
             </section>
             <section className={`${styles.bgOurTeam} w-screen`}>
                 <OurTeam styles={styles} overed={overed} handleLeaveOurTeam={handleLeaveOurTeam} handleOverOurTeam={handleOverOurTeam}/>
             </section>
-            <section className="w-screen h-screen">
+            <section className=" py-20">
                 <Trust1 styles={styles}/>
             </section>
             <section>
                 <EndSection styles={styles}/>
-                <div className="w-screen h-[50vh]">
+                <div className="">
                     <Image
                     src={troinabg}
                     width={1920}
@@ -50,7 +50,7 @@ export default function Homepage(){
                     <EndSection styles={styles}/>   
                 </div>
             </section>
-            <section className="w-screen h-screen">
+            <section className="py-20">
                 <Trust2 styles={styles}/>
             </section>
 
