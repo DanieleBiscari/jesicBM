@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from "@/app/styles/servicepage.module.css";
 import stylesHomepage from "@/app/styles/homepage.module.css";
 import ServicePresentation from "./(components)/servicePresentation";
@@ -23,7 +23,11 @@ export default function Page() {
       </section>
 
       <section className="">
-        <WhatWeOffer styles={styles} clicked={clicked} setClicked={setClicked} />
+        <WhatWeOffer
+          styles={styles}
+          clicked={clicked}
+          setClicked={setClicked}
+        />
       </section>
 
       <section>
@@ -42,11 +46,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="">
+      {/* inserire alla classe bgActionPlan l'immagine realizzata da Marco come background */}
+      <section className={`${styles.bgActionPlan} ${styles.bgWhite} py-20`}>
         <ActionPlan styles={styles} />
       </section>
 
-      {clicked != "" ? <div className={`${styles.blackerFilter} z-0`}></div> : <></>}
+      {clicked != "" ? (
+        <div className={`${styles.blackerFilter} z-0`}></div>
+      ) : (
+        <></>
+      )}
     </main>
   );
 }
