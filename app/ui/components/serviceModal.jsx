@@ -17,7 +17,7 @@ const ServiceModal = ({
   if (clicked === title) {
     return (
       <div
-        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex h-[85vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:py-8`}
+        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex max-h-[90vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:pb-16 lg:pt-8`}
       >
         <div className="z-10 mx-auto mb-8 cursor-pointer p-2">
           <Image

@@ -8,7 +8,7 @@ export default function GeneralLayout({children}) {
           <Navbar/>
         </div>
         {children}
-        <div>
+        <div className="">
           <Footer/>
         </div>
       </section>

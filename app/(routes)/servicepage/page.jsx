@@ -8,10 +8,23 @@ import ActionPlan from "./(components)/actionPlan";
 import EndSection from "@/app/ui/components/endSection";
 import Image from "next/image";
 import troinabg from "@/public/img/troinabg2.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Page() {
   const [clicked, setClicked] = useState("");
+  const [windowWidth, setWindowWidth] = useState(undefined);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newWindowWidth = window.innerWidth;
+      setWindowWidth(newWindowWidth);
+    };
+
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  });
+
   return (
     <main className="relative overflow-x-hidden">
       <section className="relative py-48">
@@ -47,8 +60,12 @@ export default function Page() {
       </section>
 
       {/* inserire alla classe bgActionPlan l'immagine realizzata da Marco come background */}
-      <section className={`${styles.bgActionPlan} ${styles.bgWhite} py-20`}>
-        <ActionPlan styles={styles} />
+      <section className={`${styles.bgWhite} py-20 relative`}>
+        <ActionPlan
+          styles={styles}
+          windowWidth={windowWidth}
+          setWindowWidth={setWindowWidth}
+        />
       </section>
 
       {clicked != "" ? (
