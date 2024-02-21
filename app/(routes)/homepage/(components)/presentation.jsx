@@ -50,7 +50,7 @@ const Presentation = ({ styles }) => {
             <p
               className={`${roboto.className} ${styles.blurredDiv} ${styles.animationON} ${styles.pPresentation}  p1 absolute left-[95%] z-10 h-full w-[45vw] rounded-r-2xl p-4 pl-8 ${animationShowed ? "" : "hidden"}`}
             >
-              Troina, incantevole comune nella provincia di Enna, si distingue
+              <b>Troina</b>, incantevole comune nella provincia di Enna, si distingue
               per la sua ricca storia e autentica bellezza. Circondato da
               paesaggi mozzafiato, Troina vanta un patrimonio culturale unico,
               testimoniato dai suoi antichi monumenti e dalla vivace tradizione

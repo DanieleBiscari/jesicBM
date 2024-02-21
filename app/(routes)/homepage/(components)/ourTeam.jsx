@@ -63,7 +63,7 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                             <div className={`text-gray-900 absolute left-[90%] top-0 w-[20rem] py-4 pe-4 rounded-e-xl rounded-es-xl pl-20 ${styles.bgWhite}`}>
                                 <p className={`${styles.opacityAnim}`}>
                                     Consulenza ai <b>Comuni</b> aderenti al progetto Case a 1€ per valorizzare i propri centri storici.
-                                    <br/> <br/> Consulenza ai privati che aderendo al progetto Case a 1€ vogliono investire nelle aree marginali italiane.
+                                    <br/> <br/> Consulenza ai <b>privati</b> che aderendo al progetto Case a 1€ vogliono investire nelle aree marginali italiane.
                                 </p>
                                 
                             </div>

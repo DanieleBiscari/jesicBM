@@ -17,7 +17,7 @@ const ServiceModal = ({
   if (clicked === title) {
     return (
       <div
-        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex max-h-[90vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:pb-16 lg:pt-8`}
+        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex max-h-[90vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:pb-16 lg:pt-8 overflow-y-scroll sm:overflow-y-hidden`}
       >
         <div className="z-10 mx-auto mb-8 cursor-pointer p-2">
           <Image
@@ -85,7 +85,7 @@ const ServiceModal = ({
             <Image
               src={image}
               alt={`image of service ${title}`}
-              className={`mx-auto object-contain lg:max-h-full lg:max-w-full lg:object-cover ${title.includes("Platinum") ? " mix-blend-screen" : " "}`}
+              className={`mx-auto object-contain lg:max-h-full lg:max-w-full lg:object-cover ${title.includes("Platinum") ? " mix-blend-screen" : title.includes("Golden") ? "mix-blend-screen" : " "}`}
             ></Image>
           </div>
         </div>

@@ -8,7 +8,7 @@ const ServicePresentation = ({ styles }) => {
     <div className="w-[80%] py-16 mx-auto lg:w-[50%] flex flex-col justify-evenly h-full lg:ml-20 gap-4 sm:gap-0">
       <div className="h-full">
         <p
-          className={`${styles.typoPresentation} ${roboto.className}`}
+          className={`${styles.typoPresentation} ${roboto.className} mb-10`}
         >
           BM vi assisterà nella fase{" "}
           <b className={styles.enfTextPresentation}>burocratica</b>, nella{" "}
@@ -23,6 +23,17 @@ const ServicePresentation = ({ styles }) => {
         <div className={`${roboto.className} ${styles.textLink} flex flex-col gap-4`}>
           <div className="flex justify-between items-center cursor-pointer">
             <p>I nostri servizi da remoto</p>
+            <Image
+              className="w-6 h-6"
+              src={arrowDown}
+              width={32}
+              height={32}
+              alt="arrow Down"
+            ></Image>
+          </div>
+          <div className="w-full h-[2px] rounded-lg bg-slate-200"></div>
+          <div className="flex justify-between items-center cursor-pointer">
+            <p>I nostri servizi in presenza</p>
             <Image
               className="w-6 h-6"
               src={arrowDown}

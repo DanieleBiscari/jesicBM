@@ -67,7 +67,7 @@ const WhyUs = ({ styles }) => {
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
-                  Communità
+                  Comunità
                 </h3>
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,.9rem)]`}

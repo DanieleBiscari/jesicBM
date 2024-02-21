@@ -1,6 +1,9 @@
 .bgWhite {
   background-color: var(--bianco-troina);
 }
+.flipX{
+  transform: scaleX(-1);
+}
 
 .blackerFilter {
   position: absolute;

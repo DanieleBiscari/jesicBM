@@ -19,14 +19,22 @@ export default function Page() {
       const newWindowWidth = window.innerWidth;
       setWindowWidth(newWindowWidth);
     };
+    
+    const bodyElement = document.querySelector("body");
 
-      handleResize();
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+    if (clicked != "") {
+      bodyElement.classList.add("overflow-hidden");
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      bodyElement.classList.remove("overflow-hidden");
+    };
   });
 
   return (
-    <main className="relative overflow-x-hidden">
+    <main className={`relative`}>
       <section className="relative py-48">
         <ServicePresentation styles={styles} />
       </section>
@@ -45,13 +53,13 @@ export default function Page() {
 
       <section>
         <EndSection styles={stylesHomepage} />
-        <div className="h-[50vh]">
+        <div className="">
           <Image
             src={troinabg}
             width={1920}
             height={1080}
             alt="image troina"
-            className=" h-full object-cover"
+            className={`w-100 h-full object-cover`}
           />
         </div>
         <div className="rotate-180">
@@ -60,7 +68,7 @@ export default function Page() {
       </section>
 
       {/* inserire alla classe bgActionPlan l'immagine realizzata da Marco come background */}
-      <section className={`${styles.bgWhite} py-20 relative`}>
+      <section className={`${styles.bgWhite} relative py-20`}>
         <ActionPlan
           styles={styles}
           windowWidth={windowWidth}

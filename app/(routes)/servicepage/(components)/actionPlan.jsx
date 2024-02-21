@@ -57,7 +57,9 @@ const ActionPlan = ({ styles, windowWidth }) => {
       <Image
         src={backgroundActionPlan}
         alt="Immagine di background Traina"
-        className="absolute right-0 z-0 hidden h-full aspect-auto lg:block"
+        width={1051}
+        height={830}
+        className="absolute right-0 z-0 hidden w-[45rem] h-full aspect-auto lg:block"
       ></Image>
       <h1
         className={`${ebGaramond.className} relative z-10 mb-8 text-center leading-[100%] text-gialloTro [font-size:_clamp(2.5rem,3.5vw,3.5rem)] md:ml-20 md:text-start`}
