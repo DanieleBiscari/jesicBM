@@ -7,7 +7,7 @@ import vision from "@/public/img/vision.svg"
 import etica from "@/public/img/etica.svg"
 import EndSection from "@/app/ui/components/endSection";
 
-//todo:  impostare il responsive
+
 
 const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
 
@@ -16,8 +16,8 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
             <h1 className={`italic ${styles.h1CustomTroina} ${styles.colorBlue} ${ebGaramond.className}  text-center pt-32 mb-12`}>Startup <span className={`${styles.colorYellow}`}>Team</span></h1>
 
             <div className="flex flex-wrap lg:grid lg:grid-cols-2 w-full">
-                <div className="flex justify-end p-10 lg:justify-end items-center gap-8  w-full">
-                    <div className="text-right">
+                <div className="flex justify-end flex-col sm:flex-row p-10 lg:justify-end items-center gap-8  w-full">
+                    <div className="text-right ml-auto sm:m-0">
                         <h2 className={`${styles.colorBlue} ${styles.h2Custom} ${ebGaramond.className} font-bold leading-[1] mb-2`}>Angelo <br/> Baudo</h2>
                         <div className={`text-gray-900 ${ibmPlexSans.className} leading-7`}>
                             <h3 className="font-bold text-[1.1rem]">Fondatore e Amministratore</h3>
@@ -28,12 +28,12 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                             </ul>
                         </div>
                     </div>
-                    <Image src={angelo} width={100} height={100} className="w-[10rem] sm:w-[14rem]" alt="location"></Image>
+                    <Image src={angelo} width={100} height={100} className="w-[10rem] sm:w-[14rem] ml-auto sm:m-0" alt="location"></Image>
                 </div>
 
-                <div className="flex justify-start p-10 lg:justify-start items-center gap-8  w-full">
-                    <Image src={paolo} width={100} height={100} className="w-[10rem] sm:w-[14rem]" alt="location"></Image>
-                    <div className="text-left">
+                <div className="flex justify-start flex-col-reverse sm:flex-row p-10 lg:justify-start items-center gap-8  w-full">
+                    <Image src={paolo} width={100} height={100} className="w-[10rem] sm:w-[14rem] mr-auto sm:m-0" alt="location"></Image>
+                    <div className="text-left mr-auto sm:m-0">
                         <h2 className={`${styles.colorBlue} ${styles.h2Custom} ${ebGaramond.className} font-bold leading-[1] mb-2`}>Paolo <br/> Mare</h2>
                         <div className={`text-gray-900 ${ibmPlexSans.className} leading-7`}>
                             <h3 className="font-bold text-[1.1rem]">Co-Fondatore</h3>
@@ -52,8 +52,8 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                 <br/><span className=" font-bold">Investire con BM significa velocizzare il tuo processo di acquisto e riqualificazione.</span>
             </p>
 
-            <div className="flex flex-wrap lg:grid lg:grid-cols-2 w-full mt-40 pb-40">
-                <div>
+            <div className="flex flex-wrap lg:grid lg:grid-cols-2 w-full mt-20 pb-40 gap-10">
+                <div className="hidden sm:block">
                     <div  className={"flex justify-center relative mb-6" + (overed === 0 ? " z-10" : "")}>
                         <div onMouseOver={() => handleOverOurTeam(0)} onMouseLeave={handleLeaveOurTeam} className={`${styles.btnOurTeam} relative flex justify-center items-center`}>
                             <Image src={objective} width={100} height={100} className="w-12 inline mr-2" alt="location"></Image>
@@ -102,7 +102,7 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                         </div>
                     </div>
                 </div>
-                <p className={`${ebGaramond.className} italic font-semibold ${styles.colorBlue} ${styles.h3Custom} pe-72`}>
+                <p className={`${ebGaramond.className} italic font-semibold ${styles.colorBlue} ${styles.h3Custom} mx-auto px-8  lg:mx-0 lg:px-32`}>
                     “Sono stati accesi i riflettori sui centri storici. <br />A noi, giovani generazioni, tocca accendere la luce in ogni casa”
                 </p>
             </div>

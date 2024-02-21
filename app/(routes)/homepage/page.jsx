@@ -23,12 +23,13 @@ export default function Homepage(){
 
     return(
         <main className="overflow-x-hidden relative">
-            <section className={`${styles.bgPresentation} flex w-screen h-screen`}>
+            <section className={`${styles.bgPresentation}`}>
                 <Presentation styles={styles}/>
             </section>
-            <section className="">
+            <section className=" xl:min-h-screen flex justify-center items-center pb-20 lg:pt-20">
                 <WhyUs styles={styles}/>
             </section>
+                <EndSection styles={styles}/>
             <section className={`${styles.bgOurTeam} w-screen`}>
                 <OurTeam styles={styles} overed={overed} handleLeaveOurTeam={handleLeaveOurTeam} handleOverOurTeam={handleOverOurTeam}/>
             </section>

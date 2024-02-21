@@ -1,183 +1,187 @@
-.colorBlue{
-    color: var(--blu-troina);
+.colorBlue {
+  color: var(--blu-troina);
 }
-.bgBlue{
-    background-color: var(--blu-troina);
-}
-
-.colorYellow{
-    color: var(--giallo-troina);
+.bgBlue {
+  background-color: var(--blu-troina);
 }
 
-.colorGray{
-    color: var(--grigio-troina);
+.colorYellow {
+  color: var(--giallo-troina);
 }
 
-.colorWhite{
-    color: var(--bianco-troina);
-}
-.bgWhite{
-    background-color: var(--bianco-troina);
+.colorGray {
+  color: var(--grigio-troina);
 }
 
-.h1Custom{
-    font-size: clamp(3rem, 5vw, 5rem);
+.colorWhite {
+  color: var(--bianco-troina);
 }
-.h2Custom{
-    font-size: clamp(2rem, 4vw, 4rem);
-}
-.h3Custom{
-    font-size: clamp(1rem, 3vw, 3rem);
+.bgWhite {
+  background-color: var(--bianco-troina);
 }
 
-.h1CustomTroina{
-    font-size: clamp(4rem, 6vw, 6rem);
+.h1Custom {
+  font-size: clamp(3rem, 5vw, 5rem);
+}
+.h2Custom {
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+.h3Custom {
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
-.btnHomepage{
-    border: 2px solid var(--blu-troina);
+.h1CustomTroina {
+  font-size: clamp(4rem, 6vw, 6rem);
 }
 
-.btnHomepage:hover{
-    background-color: rgb(248 250 252);
-    color: var(--blu-troina);
-    border: 2px solid var(--blu-troina);
+.btnHomepage {
+  border: 2px solid var(--blu-troina);
 }
 
-.bgPresentation{
-    background-image: url("../../public/img/bgPresentation.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.btnHomepage:hover {
+  background-color: rgb(248 250 252);
+  color: var(--blu-troina);
+  border: 2px solid var(--blu-troina);
 }
 
-.bgOurTeam{
-    background-color: #E6E4D9;
+.bgPresentation {
+  background-image: url("../../public/img/bgPresentation.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.btnOurTeam{
-    background-color: #E3E1D6;
-    border-radius: 16.237px;
-    box-shadow: 0px 20px 21.9px -4px rgba(0, 0, 0, 0.07);
-    padding: 1rem 2rem;
-    cursor: default;
+@media (max-width: 768px) {
+  .bgPresentation {
+    background-position-y: -20rem;
+  }
 }
 
-.btnOurTrust1{
-    border-radius: 16.237px;
-    box-shadow: 0px 20px 21.9px -4px rgba(0, 0, 0, 0.07);
-    padding: 1rem 2rem;
-    cursor: default;
+.bgOurTeam {
+  background-color: #e6e4d9;
 }
 
-.bulletLine{
-    list-style-type: "— ";
+.btnOurTeam {
+  background-color: #e3e1d6;
+  border-radius: 16.237px;
+  box-shadow: 0px 20px 21.9px -4px rgba(0, 0, 0, 0.07);
+  padding: 1rem 2rem;
+  cursor: default;
 }
 
-.whiterFilter{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.516);
-    animation: opacity 1s ease;
+.btnOurTrust1 {
+  border-radius: 16.237px;
+  box-shadow: 0px 20px 21.9px -4px rgba(0, 0, 0, 0.07);
+  padding: 1rem 2rem;
+  cursor: default;
 }
 
-
-.blurredDiv{
-    background: rgba(230, 228, 217, 0.03);
-    backdrop-filter: blur(13px);
+.bulletLine {
+  list-style-type: "— ";
 }
 
-.languageColor{
-    color:#339abcdf;
+.whiterFilter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.516);
+  animation: opacity 1s ease;
 }
 
-.animationON{
-    animation: opacity 1s ease-in;
+.blurredDiv {
+  background: rgba(230, 228, 217, 0.03);
+  backdrop-filter: blur(13px);
 }
 
-.opacityAnim{
-    animation: opacity 1s ease-in;
+.languageColor {
+  color: #339abcdf;
+}
+
+.animationON {
+  animation: opacity 1s ease-in;
+}
+
+.opacityAnim {
+  animation: opacity 1s ease-in;
 }
 
 @keyframes opacity {
-    0%{
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100%{
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
-.pPresentation{
-    font-size: clamp(1rem, 1.8vw, 1.5rem);
+.pPresentation {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
 }
 
-
-.circleWhyUs{
-    padding: 2rem;
-    border-radius: 100%;
-    border-width: 4px;
-    border-color: white;
-    width: 12rem;
-    height: 12rem;
+.circleWhyUs {
+  border-radius: 100%;
+  border-width: 4px;
+  border-color: white;
+  width: 12vw;
+  height: 12vw;
+  min-width: 8rem;
+  min-height: 8rem;
 }
 
-.circleOurTeam{
-    width: 12rem;
-    height: 12rem;
+.circleOurTeam {
+  width: 12rem;
+  height: 12rem;
 }
 
-.circleWhyUs:hover{
-    background-color: white;
-    color: #13637E;
-    text-align: center;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: default;
+.circleWhyUs:hover,
+.circleWhyUs:active {
+  background-color: white;
+  color: #13637e;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
 }
 
-.opacityAnimation{
-    animation: opacityIn 1s ease;
+.opacityAnimation {
+  animation: opacityIn 1s ease;
 }
 
- @keyframes opacityIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
- }
-
-
-.circleWhyUs:nth-of-type(3){
-    margin-top: -5rem;
-    margin-bottom: -5rem;
+@keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.footerWhyUs{
-    background-color: #84833F;
-    color: #13637E;
+.circleWhyUs:nth-of-type(3) {
+  margin-top: -5rem;
+  margin-bottom: -5rem;
 }
 
-.animationInfiniteScroll{
-    animation: infiniteScroll 4s linear  infinite;
-    -webkit-animation: infiniteScroll 4s linear infinite; /* Compatibilità con browser vecchi */   
+.footerWhyUs {
+  background-color: #84833f;
+  color: #13637e;
 }
 
+.animationInfiniteScroll {
+  animation: infiniteScroll 4s linear infinite;
+  -webkit-animation: infiniteScroll 4s linear infinite; /* Compatibilità con browser vecchi */
+}
 
 @keyframes infiniteScroll {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-103%);
-    }
+  0% {
+    transform: translateX(0);
   }
+
+  100% {
+    transform: translateX(-103%);
+  }
+}
