@@ -82,7 +82,7 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
 
   return (
     <div>
-      <div className="flex h-full w-full columns-2 gap-8 px-12 py-20 lg:py-40 justify-center">
+      <div id="remoteService" className="flex h-full w-full columns-2 gap-8 px-12 pb-10 pt-40 justify-center">
         <div className="h-full lg:w-[60%]">
           <h1
             className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.3rem,3.5vw,3.5rem)] mb-8`}
@@ -121,7 +121,7 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
         </div>
       </div>
 
-      <div className="flex w-full columns-2 gap-8 px-12 pb-20 lg:pb-40">
+      <div id="presenceService" className="flex w-full columns-2 gap-8 px-12 py-36">
         <div className="hidden w-[40%] items-center justify-center lg:flex">
           {/* cancellami */}
           <div>questo dovrà essere un video -{"->"}</div>

@@ -2,8 +2,10 @@
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Image from "next/image";
 import arrowDown from "@/public/img/arrowDown.svg";
+import { handleSmoothScroll } from "@/app/lib/bmlib";
 
 const ServicePresentation = ({ styles }) => {
+
   return (
     <div className="w-[80%] py-16 mx-auto lg:w-[50%] flex flex-col justify-evenly h-full lg:ml-20 gap-4 sm:gap-0">
       <div className="h-full">
@@ -20,8 +22,8 @@ const ServicePresentation = ({ styles }) => {
             Il tuo sogno, la nostra missione, il futuro di Troina.
           </b>
         </p>
-        <div className={`${roboto.className} ${styles.textLink} flex flex-col gap-4`}>
-          <div className="flex justify-between items-center cursor-pointer">
+        <div className={`${roboto.className} ${styles.textLink} flex flex-col gap-4 z-30 relative`}>
+          <a onClick={() => handleSmoothScroll("#remoteService")} className="flex justify-between items-center cursor-pointer">
             <p>I nostri servizi da remoto</p>
             <Image
               className="w-6 h-6"
@@ -30,9 +32,9 @@ const ServicePresentation = ({ styles }) => {
               height={32}
               alt="arrow Down"
             ></Image>
-          </div>
+          </a>
           <div className="w-full h-[2px] rounded-lg bg-slate-200"></div>
-          <div className="flex justify-between items-center cursor-pointer">
+          <a onClick={() => handleSmoothScroll("#presenceService")} className="flex justify-between items-center cursor-pointer">
             <p>I nostri servizi in presenza</p>
             <Image
               className="w-6 h-6"
@@ -41,9 +43,9 @@ const ServicePresentation = ({ styles }) => {
               height={32}
               alt="arrow Down"
             ></Image>
-          </div>
+          </a>
           <div className="w-full h-[2px] rounded-lg bg-slate-200"></div>
-          <div className="flex justify-between items-center cursor-pointer">
+          <a onClick={() => handleSmoothScroll("#actionPlan")} className="flex justify-between items-center cursor-pointer">
             <p>Action plan con BM</p>
             <Image
               className="w-6 h-6"
@@ -52,7 +54,7 @@ const ServicePresentation = ({ styles }) => {
               height={32}
               alt="arrow Down"
             ></Image>
-          </div>
+          </a>
         </div>
       </div>
 

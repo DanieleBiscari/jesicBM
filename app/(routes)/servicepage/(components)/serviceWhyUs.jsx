@@ -69,13 +69,14 @@ const ServiceWhyUs = ({ styles }) => {
                   personalizzato in base alle tue esigenze
                 </b>
               </p>
-              <div>
+              <div className="flex">
                 <Button1
                   name={"scopri di più"}
                   textColor={"#E6E4D9"}
                   textSize={"1rem"}
                   borderColor={""}
                   backgroundColor={"#13637E"}
+                  url={"#remoteService"}
                 ></Button1>
               </div>
             </div>

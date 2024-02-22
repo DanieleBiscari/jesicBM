@@ -9,7 +9,7 @@ const Button2 = ({
 }) => {
   return (
     <>
-      <a
+      <div
         href=""
         className={`${borderColor ? "border-2 [font-size:_clamp(.5rem,1vw,1rem)]" : ""} ${ibmPlexSans.className} w-full rounded-3xl px-2 py-1 font-medium lg:px-4 lg:py-2`}
         style={{
@@ -31,7 +31,7 @@ const Button2 = ({
             </p>
           </div>
         </div>
-      </a>
+      </div>
     </>
   );
 };

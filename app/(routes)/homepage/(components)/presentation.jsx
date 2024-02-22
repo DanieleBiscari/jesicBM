@@ -1,8 +1,8 @@
 "use client";
 import Button1 from "@/app/ui/components/button1";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
-import Image from "next/image";
 import logo from "@/public/img/logo.svg";
+import Image from "next/image";
 import { useState } from "react";
 
 const Presentation = ({ styles }) => {
@@ -33,7 +33,6 @@ const Presentation = ({ styles }) => {
                 alt="logo"
                 width={200}
                 className="w-46"
-                priority
               />
               <h2
                 className={`${ibmPlexSans.className} mb-8 text-center text-[2rem] font-semibold leading-8`}
@@ -45,6 +44,7 @@ const Presentation = ({ styles }) => {
                 textSize={"1.1rem"}
                 borderColor={"white"}
                 textColor={"white"}
+                url={"./servicepage"}
               />
             </div>
             <p
@@ -101,6 +101,7 @@ const Presentation = ({ styles }) => {
               name={"I NOSTRI SERVIZI"}
               borderColor={"white"}
               textColor={"white"}
+              url={"./servicepage"}
             />
           </div>
         </div>

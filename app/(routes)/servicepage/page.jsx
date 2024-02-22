@@ -35,7 +35,7 @@ export default function Page() {
 
   return (
     <main className={`relative`}>
-      <section className="relative py-48">
+      <section className="relative py-24 ">
         <ServicePresentation styles={styles} />
       </section>
 
@@ -57,9 +57,10 @@ export default function Page() {
           <Image
             src={troinabg}
             width={1920}
-            height={1080}
+            height={620}
             alt="image troina"
             className={`w-100 h-full object-cover`}
+            priority
           />
         </div>
         <div className="rotate-180">
@@ -68,7 +69,7 @@ export default function Page() {
       </section>
 
       {/* inserire alla classe bgActionPlan l'immagine realizzata da Marco come background */}
-      <section className={`${styles.bgWhite} relative py-20`}>
+      <section id="actionPlan" className={`${styles.bgWhite} relative py-28`}>
         <ActionPlan
           styles={styles}
           windowWidth={windowWidth}

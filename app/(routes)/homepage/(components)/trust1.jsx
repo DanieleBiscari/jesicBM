@@ -22,7 +22,7 @@ const Trust1 = ({styles}) => {
             </div>
             <div className="flex justify-center items-center px-8 flex-col gap-12">
                 <Image src={graphBar} width={100} height={100} className="object-contain w-[100%] max-h-[36rem]" alt="life"></Image>
-                <Button1 name={"SCOPRI DI PIÙ →"} textColor={"#13637E"} textSize={"1rem"} borderColor={""} backgroundColor={"#E6E4D9"}/>
+                <Button1 name={"SCOPRI DI PIÙ →"} textColor={"#13637E"} textSize={"1rem"} borderColor={""} backgroundColor={"#E6E4D9"} url={"./servicepage"}/>
             </div>
         </div>
      );

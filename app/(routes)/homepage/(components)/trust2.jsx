@@ -8,7 +8,7 @@ const Trust2 = ({styles}) => {
         <div className="flex flex-col gap-20 lg:gap-0 lg:grid lg:grid-cols-2 h-full">
             <div className="flex justify-center items-center px-8 flex-col gap-12">
                 <Image src={graphBar2} width={100} height={100} className="object-contain w-[100%] max-h-[36rem]" alt="life"></Image>
-                <Button1 name={"SCOPRI DI PIÙ →"} textColor={"#13637E"} textSize={"1rem"} borderColor={""} backgroundColor={"#E6E4D9"}/>
+                <Button1 name={"SCOPRI DI PIÙ →"} textColor={"#13637E"} textSize={"1rem"} borderColor={""} backgroundColor={"#E6E4D9"} url={"./servicepage"}/>
             </div>
             <div className="flex flex-col justify-center items-center gap-20">
                 <div className={`w-[70%] lg:w-[30rem] ${styles.btnOurTrust1}`}>

@@ -1,0 +1,56 @@
+/* .hoverUnderline::after{
+    height: 2px;
+    width: 2px;
+    background-color: red;
+}
+
+.hoverUnderline:hover{
+
+} */
+
+.hoverUnderline::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: var(--blu-troina);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.hoverUnderlineWhite::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: var(--bianco-troina);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.hoverUnderlineWhite:hover::after {
+  width: 100%;
+}
+
+.hoverUnderline:hover::after {
+  width: 100%;
+}
+
+.animationNavbar{
+  height: 200px;
+  animation: navbarOn .2s ease;
+}
+
+@keyframes navbarOn {
+  from{
+    height: 0;
+  }
+
+  to{
+    height: 200px;
+  }
+}

@@ -8,7 +8,6 @@ import location from "@/public/img/location.svg";
 import life from "@/public/img/life.svg";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import { useState } from "react";
-import EndSection from "@/app/ui/components/endSection";
 
 const WhyUs = ({ styles }) => {
   const [overedItem, setOveredItem] = useState(null);
@@ -41,7 +40,7 @@ const WhyUs = ({ styles }) => {
                   Convenienza
                 </h3>
                 <p
-                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,.9rem)]`}
+                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
                   Elevata qualità di vita senza sostenere oneri finanziari
                   eccessivi.
@@ -70,7 +69,7 @@ const WhyUs = ({ styles }) => {
                   Comunità
                 </h3>
                 <p
-                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,.9rem)]`}
+                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
                   Calorosa accoglienza. Senso di appartenenza e solidarietà e
                   facile integrazione.
@@ -99,7 +98,7 @@ const WhyUs = ({ styles }) => {
                   Stile di vita
                 </h3>
                 <p
-                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,.9rem)]`}
+                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
                   Una comunità per vivere a ritmi sostenibili, più lentamente e
                   con meno frenesia.
@@ -128,7 +127,7 @@ const WhyUs = ({ styles }) => {
                   Location
                 </h3>
                 <p
-                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,.9rem)]`}
+                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
                   A soli 20 minuti dal parco dei Nebrodi e ad un’ora
                   dall’aeroporto internazionale di Catania.
@@ -157,7 +156,7 @@ const WhyUs = ({ styles }) => {
                   Sostenibilità
                 </h3>
                 <p
-                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,.9rem)]`}
+                  className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
                   Investire qui significa contribuire alla tutela dell'ambiente
                   e alla crescita sostenibile.
@@ -196,6 +195,7 @@ const WhyUs = ({ styles }) => {
             textColor={"#F5A400"}
             textSize={"1rem"}
             borderColor={"#F5A400"}
+            url={"/servicepage"}
           />
         </div>
       </div>
