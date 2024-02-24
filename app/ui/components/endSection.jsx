@@ -8,7 +8,7 @@ const EndSection = ({styles}) => {
     // const numeri = ["0", (margin+footerDivWidth)+"px", (margin+footerDivWidth)*2+"px"];
 
     return ( 
-        <div className={`${styles.footerWhyUs} h-[3rem] ${ibmPlexSans.className} pt-1 font text-[25px] text-center relative`}>
+        <div className={`${styles.footerWhyUs} [height:_clamp(2rem,3vw,3rem)] ${ibmPlexSans.className} pt-1 font [font-size:_clamp(1rem,1.5vw,1.5rem)] text-center relative`}>
             {numeri.map((numero, id) =>(
                 <div key={id} className={`${styles.animationInfiniteScroll} absolute h-full text-start w-[340px]`} style={{left: numero}}>• BM Attrazione Investimenti</div>
             ))} 

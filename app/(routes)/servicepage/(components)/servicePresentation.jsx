@@ -1,7 +1,7 @@
 "use client";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Image from "next/image";
-import arrowDown from "@/public/img/arrowDown.svg";
+import arrowDown from "@/public/img/arrowDownWhite.svg";
 import { handleSmoothScroll } from "@/app/lib/bmlib";
 
 const ServicePresentation = ({ styles }) => {
@@ -23,7 +23,7 @@ const ServicePresentation = ({ styles }) => {
           </b>
         </p>
         <div className={`${roboto.className} ${styles.textLink} flex flex-col gap-4 z-30 relative`}>
-          <a onClick={() => handleSmoothScroll("#remoteService")} className="flex justify-between items-center cursor-pointer">
+          <a onClick={() => handleSmoothScroll("#remoteService")} className="flex justify-between items-center cursor-pointer hover:bg-slate-900 hover:bg-opacity-20">
             <p>I nostri servizi da remoto</p>
             <Image
               className="w-6 h-6"
@@ -34,7 +34,7 @@ const ServicePresentation = ({ styles }) => {
             ></Image>
           </a>
           <div className="w-full h-[2px] rounded-lg bg-slate-200"></div>
-          <a onClick={() => handleSmoothScroll("#presenceService")} className="flex justify-between items-center cursor-pointer">
+          <a onClick={() => handleSmoothScroll("#presenceService")} className="flex justify-between items-center cursor-pointer hover:bg-slate-900 hover:bg-opacity-20">
             <p>I nostri servizi in presenza</p>
             <Image
               className="w-6 h-6"
@@ -45,7 +45,7 @@ const ServicePresentation = ({ styles }) => {
             ></Image>
           </a>
           <div className="w-full h-[2px] rounded-lg bg-slate-200"></div>
-          <a onClick={() => handleSmoothScroll("#actionPlan")} className="flex justify-between items-center cursor-pointer">
+          <a onClick={() => handleSmoothScroll("#actionPlan")} className="flex justify-between items-center cursor-pointer hover:bg-slate-900 hover:bg-opacity-20">
             <p>Action plan con BM</p>
             <Image
               className="w-6 h-6"

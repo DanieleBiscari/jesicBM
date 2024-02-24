@@ -85,7 +85,7 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
       <div id="remoteService" className="flex h-full w-full columns-2 gap-8 px-12 pb-10 pt-40 justify-center">
         <div className="h-full lg:w-[60%]">
           <h1
-            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.3rem,3.5vw,3.5rem)] mb-8`}
+            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.5rem,3.5vw,3.5rem)] mb-8`}
           >
             <b className=" font-bold">I nostri servizi da remoto</b> <br /> per
             investire a Troina
@@ -137,7 +137,7 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
 
         <div className="flex w-full flex-col  lg:w-[60%]">
           <h1
-            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.3rem,3.5vw,3.5rem)]`}
+            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.5rem,3.5vw,3.5rem)]`}
           >
             <b className=" font-bold">I nostri servizi in presenza</b> <br />
             per investire a Troina

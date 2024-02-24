@@ -2,9 +2,16 @@
     background-image: url("../../public/img/piazzaTroina.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 .suggestion:hover{
-    background-color: var(--bianco-troina);
+    background-color: rgba(85, 121, 134, 0.7);
+    
+}
+
+.bgLanding{
+    background-image: url("../../public/img/bgLanding.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }

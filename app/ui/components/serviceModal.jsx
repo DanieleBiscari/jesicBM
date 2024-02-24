@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
-import arrowDown from "@/public/img/arrowDown.svg";
+import arrowDown from "@/public/img/arrowDownWhite.svg";
 import Button1 from "./button1";
 
 const ServiceModal = ({
