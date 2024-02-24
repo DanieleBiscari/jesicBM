@@ -1,4 +1,5 @@
 import { ibmPlexSans } from "@/app/ui/fonts";
+import Link from "next/link";
 
 const Button2 = ({
   content,
@@ -6,11 +7,12 @@ const Button2 = ({
   borderColor,
   textColor,
   backgroundColor,
+  url
 }) => {
   return (
     <>
-      <div
-        href=""
+      <Link
+        href={url}
         className={`${borderColor ? "border-2 [font-size:_clamp(.5rem,1vw,1rem)]" : ""} ${ibmPlexSans.className} w-full rounded-3xl px-2 py-1 font-medium lg:px-4 lg:py-2`}
         style={{
           borderColor: borderColor,
@@ -27,11 +29,11 @@ const Button2 = ({
               <b>{content.dayPeriod}</b> ({content.hour} ORE)
             </p>
             <p>
-              faremo visita a <b>{content.howManyHouse} case</b>
+              faremo visita a <b>{content.howManyHouse} case</b>, contattando in anticipo le agenzie immobiliari
             </p>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

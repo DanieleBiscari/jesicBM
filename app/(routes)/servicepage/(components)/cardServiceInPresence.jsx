@@ -44,6 +44,7 @@ const CardServiceInPresence = ({
                 textColor={`${element.importantButton ? "#13637E" : "#E6E4D9"}`}
                 borderColor={"#E6E4D9"}
                 backgroundColor={`${element.importantButton ? "#E6E4D9" : "#13637E"}`}
+                url={"/contacts"}
               ></Button2>
             </div>
           );

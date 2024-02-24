@@ -23,7 +23,7 @@ const WhyUs = ({ styles }) => {
     <>
       <div className="flex flex-col-reverse lg:grid lg:h-[95%] lg:grid-cols-2 lg:px-4 ">
         <div
-          className={`grid-template-columns: repeat(2, 1fr) 1fr repeat(2, 1fr) hidden place-items-center gap-4 sm:grid`}
+          className={`grid-template-columns: repeat(2, 1fr) 1fr repeat(2, 1fr) hidden place-items-center sm:grid`}
         >
           <div
             onMouseLeave={() => handleLeave()}
@@ -179,7 +179,7 @@ const WhyUs = ({ styles }) => {
             className={`${ebGaramond.className} ${styles.h1Custom} mb-8 leading-[1]`}
             style={{ color: "#F5A400" }}
           >
-            Perché investire <br />a Troina?
+            Perché investire a Troina?
           </h1>
           <p
             className={`${roboto.className} mb-12 xl:pe-32 ${styles.pPresentation}`}

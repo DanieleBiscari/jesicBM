@@ -87,11 +87,6 @@ const Navbar = () => {
             Contatti
           </Link>
         </li>
-        <li
-          className={`md:list-disc ${hamburClicked ? "list-none" : "list-disc"} list-inside`}
-        >
-          PA
-        </li>
       </ul>
     </nav>
   );

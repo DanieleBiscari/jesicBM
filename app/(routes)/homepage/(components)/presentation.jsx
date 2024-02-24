@@ -6,22 +6,22 @@ import Image from "next/image";
 import { useState } from "react";
 
 const Presentation = ({ styles }) => {
-  const languageArray = ["IT", "EN"];
+  // const languageArray = ["IT", "EN"];
+  // const [language, setLanguague] = useState("IT");
   const [animationShowed, setAnimationShowed] = useState(false);
-  const [language, setLanguague] = useState("IT");
 
-  function changeLanguage(currentLanguage) {
-    languageArray.map((language, _id) => {
-      if (language === currentLanguage) {
-        if (languageArray[_id + 1]) {
-          setLanguague(languageArray[_id + 1]);
-        } else {
-          setLanguague(languageArray[0]);
-        }
-      } else {
-      }
-    });
-  }
+  // function changeLanguage(currentLanguage) {
+  //   languageArray.map((language, _id) => {
+  //     if (language === currentLanguage) {
+  //       if (languageArray[_id + 1]) {
+  //         setLanguague(languageArray[_id + 1]);
+  //       } else {
+  //         setLanguague(languageArray[0]);
+  //       }
+  //     } else {
+  //     }
+  //   });
+  // }
 
   function handleAnimationShow() {
     setAnimationShowed(true);
@@ -58,7 +58,7 @@ const Presentation = ({ styles }) => {
               />
             </div>
             <p
-              className={`${roboto.className} ${styles.blurredDiv} ${styles.animationON} ${styles.pPresentation}  p1 absolute left-[95%] z-10 h-full w-[45vw] rounded-r-2xl p-4 pl-8 ${animationShowed ? "" : "hidden"}`}
+              className={`${roboto.className} ${styles.blurredDiv} ${styles.animationON} ${styles.pPresentation} absolute left-[95%] z-10 h-full w-[45vw] rounded-r-2xl p-4 pl-8 ${animationShowed ? "" : "hidden"}`}
             >
               <b>Troina</b>, incantevole comune nella provincia di Enna, si
               distingue per la sua ricca storia e autentica bellezza. Circondato
@@ -73,9 +73,10 @@ const Presentation = ({ styles }) => {
         <div className="ml-auto mr-24 mt-20">
           <button
             className={`${ebGaramond.className} text-[3rem] font-semibold ${styles.languageColor} flex justify-start`}
-            onClick={() => changeLanguage(language)}
+            // onClick={() => changeLanguage(language)}
           >
-            Troina ({language})
+            {/* Troina ({language}) */}
+            Troina(EN)
           </button>
         </div>
       </div>

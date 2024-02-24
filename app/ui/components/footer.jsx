@@ -58,7 +58,6 @@ const Footer = () => {
               Contatti
             </Link>
           </div>
-          <p>PA</p>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className=" text-[1.5rem] font-semibold">Supporto</h1>

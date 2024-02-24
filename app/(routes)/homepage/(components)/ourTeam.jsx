@@ -24,7 +24,7 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                             <ul className=" font-[500]">
                                 <li>28 anni</li>
                                 <li>Project Manager</li>
-                                <li>Laurea in Architettura</li>
+                                <li>Architetto</li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                 <br/><span className=" font-bold">Investire con BM significa velocizzare il tuo processo di acquisto e riqualificazione.</span>
             </p>
 
-            <div className="flex flex-wrap lg:grid lg:grid-cols-2 w-full mt-20 pb-40 gap-10">
+            <div className="flex flex-wrap lg:grid lg:grid-cols-2 w-full mt-20 pb-40 gap-10 lg:gap-0">
                 <div className="hidden sm:block">
                     <div  className={"flex justify-center relative mb-6" + (overed === 0 ? " z-10" : "")}>
                         <div onMouseOver={() => handleOverOurTeam(0)} onMouseLeave={handleLeaveOurTeam} className={`${styles.btnOurTeam} relative flex justify-center items-center`}>
@@ -102,7 +102,7 @@ const OurTeam = ({styles, overed, handleOverOurTeam, handleLeaveOurTeam}) => {
                         </div>
                     </div>
                 </div>
-                <p className={`${ebGaramond.className} italic font-semibold ${styles.colorBlue} ${styles.h3Custom} mx-auto px-8  lg:mx-0 lg:px-32`}>
+                <p className={`${ebGaramond.className} italic font-semibold ${styles.colorBlue} ${styles.h3Custom} w-[80%] mx-auto px-8 lg:mx-0 lg:pe-32`}>
                     “Sono stati accesi i riflettori sui centri storici. <br />A noi, giovani generazioni, tocca accendere la luce in ogni casa”
                 </p>
             </div>

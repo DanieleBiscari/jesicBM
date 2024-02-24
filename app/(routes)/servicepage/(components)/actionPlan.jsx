@@ -12,11 +12,11 @@ const ActionPlan = ({ styles, windowWidth }) => {
       service: [
         {
           buttonName: "1. Più informazioni",
-          text: "Mettiamoci in contatto, maggiorni informazioni ti verranno fornite per aiutarti al meglio.",
+          text: "Scrivi ad uno dei comuni in cui B.M. gestisce il progetto Case a 1 €",
         },
         {
           buttonName: "2. Selezione",
-          text: "Vi aiuteremo per comprendere tutti i dettagli del progetto per un investimento consapevole.",
+          text: "Vi aiuteremo a capire se il Borgo che avete scelto è coerente con ciò che state cercando",
         },
       ],
     },
@@ -25,15 +25,15 @@ const ActionPlan = ({ styles, windowWidth }) => {
       service: [
         {
           buttonName: "3. Conoscenza",
-          text: "Forniremo tutti i dettagli delle proprietà valutate, costi e tempistiche.",
+          text: "Ti aiuteremo a conoscere la comunità e le opportunità di investimento.",
         },
         {
           buttonName: "4. Scelta",
-          text: "Aiuteremo l'acquirente nella decisione della proprietà migliore in base alle sue necessità.",
+          text: "Ti aiuteremo nella scelta dell’investimento più adatto, in maniera etica e consapevole",
         },
         {
           buttonName: "5. Investimento",
-          text: "Vi aiuteremo per la documentazione, nella scelta delle maestranze e dei materiali.",
+          text: "Saremo al tuo fianco, nella gestione della burocrazia e nella scelta di professionisti imprese locali",
         },
       ],
     },
@@ -42,7 +42,7 @@ const ActionPlan = ({ styles, windowWidth }) => {
       service: [
         {
           buttonName: "6. Lavori",
-          text: "Seguiremo per voi personalmente il processo di restauro dall’inizio alla fine.",
+          text: "Ti aiuteremo durante i lavori di investimento, offrendo assistenza nella tua lingua attraverso messaggistica istantanea e servizi remoti.",
         },
         {
           buttonName: "7. Gira la chiave",
@@ -53,20 +53,20 @@ const ActionPlan = ({ styles, windowWidth }) => {
   ];
 
   return (
-    <div className="h-full w-full relative">
+    <div className="relative h-full w-full">
       <Image
         src={backgroundActionPlan}
         alt="Immagine di background Traina"
         width={1051}
         height={830}
-        className="absolute right-0 z-0 hidden w-[45rem] h-full aspect-auto lg:block"
+        className="absolute right-0 z-0 hidden aspect-auto h-full w-[45rem] lg:block"
       ></Image>
       <h1
         className={`${ebGaramond.className} relative z-10 mb-8 text-center leading-[100%] text-gialloTro [font-size:_clamp(2.5rem,3.5vw,3.5rem)] md:ml-20 md:text-start`}
       >
         <b className=" font-bold">Action plan</b> <br /> Con BM
       </h1>
-      <div className="relative lg:p-4 z-30 flex flex-col gap-4 rounded-e-[24px] bg-[#E6E4D9] md:ml-20 lg:w-[80%] xl:w-[70%]">
+      <div className="relative z-30 flex flex-col gap-4 rounded-e-[24px] bg-[#E6E4D9] md:ml-20 lg:w-[80%] lg:p-4 xl:w-[70%]">
         {actionPlan.map((plan) => {
           counterOuter++;
           return (
@@ -77,7 +77,7 @@ const ActionPlan = ({ styles, windowWidth }) => {
                 >
                   {plan.name.toUpperCase()}
                 </h1>
-                <div className="flex w-full flex-col gap-8 md:ml-[-5rem]">
+                <div className="flex w-full flex-col gap-4 md:ml-[-5rem]">
                   {plan.service.map((service) => {
                     counter++;
                     return (
@@ -88,38 +88,25 @@ const ActionPlan = ({ styles, windowWidth }) => {
                         <div
                           className="z-10 mx-auto flex w-[20rem] justify-center md:mx-0 md:justify-end"
                           style={
-                            windowWidth >= 1024 && counter === 5
+                            windowWidth >= 1024
                               ? {
-                                  marginLeft: `${counter * 30}px`,
+                                  marginLeft: `${counter * 50}px`,
                                   opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
                                 }
-                              : windowWidth >= 1024 && counter === 6
-                                ? {
-                                    marginLeft: `${counter * 25}px`,
-                                    opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
-                                  }
-                                : windowWidth >= 1024 && counter === 7
-                                  ? {
-                                      marginLeft: `${counter * 35}px`,
-                                      opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
-                                    }
-                                  : windowWidth >= 1024 && counterOuter === 2
-                                    ? {
-                                        marginLeft: `${counterOuter * 30}px`,
-                                        opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
-                                      }
-                                    : {
-                                        opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
-                                      }
+                              : {
+                                  opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
+                                }
                           }
                         >
-                          <Button1
-                            name={service.buttonName}
-                            textColor={"#E6E4D9"}
-                            borderColor={""}
-                            backgroundColor={"#13637E"}
-                            type={"actionPlan"}
-                          ></Button1>
+                          <div className="md:min-w-52 text-center">
+                            <Button1
+                              name={service.buttonName}
+                              textColor={"#E6E4D9"}
+                              borderColor={""}
+                              backgroundColor={"#13637E"}
+                              type={"actionPlan"}
+                            ></Button1>
+                          </div>
                         </div>
                         <p className="z-10 mb-8 w-full px-8 md:mb-0 md:ml-0 md:w-1/2 md:px-4 lg:w-1/3">
                           {service.text}
