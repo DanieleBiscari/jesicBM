@@ -87,6 +87,17 @@ const Navbar = () => {
             Contatti
           </Link>
         </li>
+        <li
+          className={`md:list-disc ${hamburClicked ? "list-none" : "list-disc"} list-inside`}
+        >
+          <Link
+            href="./pa"
+            className={`${styles.hoverUnderline} relative`}
+            onClick={() => setHamburClicked(!hamburClicked)}
+          >
+            Servizi PA
+          </Link>
+        </li>
       </ul>
     </nav>
   );

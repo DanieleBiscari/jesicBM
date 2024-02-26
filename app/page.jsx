@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { firstLetterUpper } from "./lib/bmlib";
 import Image from "next/image";
@@ -12,13 +11,23 @@ import { ibmPlexSans, roboto } from "@/app/ui/fonts";
 // import BannerLanding from "./ui/components/bannerLanding";
 import Input1 from "./ui/components/input1";
 import Button1 from "./ui/components/button1";
+import CookieModal from "./ui/components/cookieModal";
 
 export default function LandingPage() {
   const cities = ["troina"];
-  const router = useRouter();
+  const infoModal = {
+    title: "DIAMO VALORE ALLA TUA PRIVACY",
+    text: 'Questo sito web utilizza cookie essenziali per offrire un\'esperienza piacevole e garantirne il corretto funzionamento e non possono essere disattivati. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su "accetto tutto" acconsenti l’utilizzo di questi cookie.',
+    buttonLeftText: "accetto solo essenziali",
+    buttonRightText: "accetto tutto",
+    urlToMore:
+      "https://www.cookiebot.com/en/privacy-policy-generator-gdpr/?utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=cb_dm_ww_eng_dsa_search_prf_lead_n_ca&utm_ad_group=ww-en-blog-en&gclid=Cj0KCQiAqsitBhDlARIsAGMR1Rj0mPHYgA3qCw_Rir3XCxR5jsW26qWLk0Ok7Tz-t_Z0aFhFzgsAe14aAgcHEALw_wcB",
+  };
+
   const searchButtonRef = useRef();
   const [suggestionArray, setSuggestionArray] = useState([]);
   const [toPageUi, setToPageUi] = useState(false);
+  const [seeCookieModal, setSeeCookieModal] = useState(true);
 
   function handleSearchClick() {
     if (suggestionArray.length === 0) {
@@ -80,15 +89,17 @@ export default function LandingPage() {
 
   return (
     <section className=" flex h-screen w-screen">
-      <div className={`${styles.bgLanding} flex w-screen flex-col gap-60 md:w-1/2`}>
-        <div className=" ml-8 mt-8 flex w-40 items-center justify-center gap-2 ">
+      <div
+        className={`${styles.bgLanding} flex w-screen flex-col justify-between md:w-1/2`}
+      >
+        <div className=" ml-8 mt-8 flex w-40 items-center justify-center gap-2">
           <Image src={logo} alt="logo" width={50} height={50} />
           <h3 className={`${ibmPlexSans.className} leading-4`}>
             Attrazione Investimenti
           </h3>
         </div>
 
-        <div>
+        <div className="mb-[50vh] mt-8">
           <div className="relative flex flex-col items-center font-bold md:ml-[10%] md:items-start">
             <h1
               className={
@@ -118,7 +129,7 @@ export default function LandingPage() {
                       <div
                         onClick={() => handleSuggestionClick(suggestion)}
                         key={id}
-                        className={`${styles.suggestion} cursor-pointer bg-gray-400 bg-opacity-60 p-2 text-biancoTro ${(suggestionArray.length-1) === id ? " rounded-b-2xl" : "" }`}
+                        className={`${styles.suggestion} cursor-pointer bg-gray-400 bg-opacity-60 p-2 text-biancoTro ${suggestionArray.length - 1 === id ? " rounded-b-2xl" : ""}`}
                       >
                         {firstLetterUpper(suggestion)}
                       </div>
@@ -169,7 +180,7 @@ export default function LandingPage() {
         }
       >
         <p
-          className={`${roboto.className} w-[80%] mb-20 text-justify antialiased`}
+          className={`${roboto.className} mb-20 w-[80%] text-justify antialiased`}
         >
           Investire nella riqualificazione dei Sobborghi Italiani è una missione
           per noi molto importante. Non solo per salvaguardare il nostro
@@ -177,6 +188,20 @@ export default function LandingPage() {
           fascino ai nostri centri storici.
         </p>
       </div>
+      {seeCookieModal ? (
+        <div className="absolute h-full w-full bg-slate-300 bg-opacity-30 z-0">
+          <CookieModal
+            title={infoModal.title}
+            text={infoModal.text}
+            buttonLeftText={infoModal.buttonLeftText}
+            buttonRightText={infoModal.buttonRightText}
+            urlToMore={infoModal.urlToMore}
+            setSeeCookieModal={setSeeCookieModal}
+          />
+        </div>
+      ) : (
+        <></>
+      )}
     </section>
   );
 }

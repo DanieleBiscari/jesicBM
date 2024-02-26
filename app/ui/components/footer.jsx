@@ -52,10 +52,18 @@ const Footer = () => {
           </div>
           <div>
             <Link
-              href="./contactspage"
+              href="./contacts"
               className={`${styles.hoverUnderlineWhite} relative`}
             >
               Contatti
+            </Link>
+          </div>
+          <div>
+            <Link
+              href="./pa"
+              className={`${styles.hoverUnderlineWhite} relative`}
+            >
+              Servizi PA
             </Link>
           </div>
         </div>
@@ -71,7 +79,7 @@ const Footer = () => {
           </div>
           <div>
             <Link
-              href="./serviceTerme"
+              href="./privacyTerme"
               className={`${styles.hoverUnderlineWhite} relative`}
             >
               Privacy policy
