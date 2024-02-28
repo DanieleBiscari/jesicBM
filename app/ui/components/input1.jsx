@@ -13,7 +13,7 @@ const Input1 = ({
 }) => {
   if (invert) {
     return (
-      <div className=" flex h-12 w-[20rem] min-w-52 rounded-2xl">
+      <div className="flex h-12 w-[20rem] min-w-52 rounded-2xl px-8">
         <input
           type="text"
           className={`${suggestionArray?.length ? "" : "rounded-s-2xl"} w-full overflow-hidden bg-gray-400 bg-opacity-60 pl-4`}

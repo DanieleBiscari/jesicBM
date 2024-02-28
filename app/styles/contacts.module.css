@@ -1,0 +1,6 @@
+.bgMain{
+    background-image: url("../../public/img/bgLanding.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
