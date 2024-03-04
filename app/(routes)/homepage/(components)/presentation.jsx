@@ -31,7 +31,7 @@ const Presentation = ({ styles }) => {
   }
 
   return (
-    <div className="flex  min-h-screen w-screen">
+    <div className="flex md:min-h-screen w-screen">
       {/* Interfaccia schermi larghi */}
       <div className="hidden min-h-screen w-screen md:flex">
         <div className="flex basis-[50%] flex-col items-center justify-center">
@@ -82,7 +82,7 @@ const Presentation = ({ styles }) => {
       </div>
 
       {/* Interfaccia schermi mobile */}
-      <div className="mt-auto  bg-bluTro pb-8 md:hidden">
+      <div className="mt-40 bg-bluTro pb-8 md:hidden">
         <p className={`${roboto.className} ${styles.pPresentation} px-8 py-4`}>
           <b>Troina</b>, incantevole comune nella provincia di Enna, si
           distingue per la sua ricca storia e autentica bellezza. Circondato da

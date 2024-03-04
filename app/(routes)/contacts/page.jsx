@@ -36,12 +36,12 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col items-center justify-center italic [font-size:_clamp(1.5rem,2.6vw,2.6rem)]">
-        <div className="w-80">
+        <div className="w-84 md:w-80 px-8 md:p-0">
           <p className="font-bold text-[#E6E4D9] text-opacity-80">
-            Il ponte tra te e i piccoli borghi italiani
+            Il ponte tra te e i piccoli borghi italiani.
           </p>
           <p className="text-[#E6E4D9] text-opacity-50">
-            Riqualificazione sostenibile dei centri storici Italiani
+            Riqualificazione sostenibile dei centri storici Italiani.
           </p>
         </div>
       </div>

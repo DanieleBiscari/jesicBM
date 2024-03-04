@@ -4,7 +4,7 @@ import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 const EndSection = ({styles}) => {
     const footerDivWidth = 321
     const margin = 30
-    const numeri = Array.from({length: 6}, (_, i) => (margin + footerDivWidth) * i + "px");
+    const numeri = Array.from({length: 8}, (_, i) => (margin + footerDivWidth) * i + "px");
     // const numeri = ["0", (margin+footerDivWidth)+"px", (margin+footerDivWidth)*2+"px"];
 
     return ( 

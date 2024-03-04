@@ -76,7 +76,7 @@ const ServiceWhyUs = ({ styles }) => {
                   textSize={"1rem"}
                   borderColor={""}
                   backgroundColor={"#13637E"}
-                  url={"#remoteService"}
+                  url={"/contacts"}
                 ></Button1>
               </div>
             </div>

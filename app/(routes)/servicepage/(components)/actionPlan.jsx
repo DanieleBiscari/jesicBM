@@ -66,7 +66,7 @@ const ActionPlan = ({ styles, windowWidth }) => {
       >
         <b className=" font-bold">Action plan</b> <br /> Con BM
       </h1>
-      <div className="relative z-30 flex flex-col gap-4 rounded-e-[24px] bg-[#E6E4D9] md:ml-20 lg:w-[80%] lg:p-4 xl:w-[70%]">
+      <div className="relative z-30 flex flex-col gap-4 rounded-e-[24px] bg-[#E6E4D9] md:ml-20 lg:w-[90%] lg:p-4 2xl:w-[70%]">
         {actionPlan.map((plan) => {
           counterOuter++;
           return (
@@ -98,7 +98,7 @@ const ActionPlan = ({ styles, windowWidth }) => {
                                 }
                           }
                         >
-                          <div className="md:min-w-52 text-center">
+                          <div className="text-center md:min-w-52">
                             <Button1
                               name={service.buttonName}
                               textColor={"#E6E4D9"}

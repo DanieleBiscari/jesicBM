@@ -16,7 +16,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="flex w-full flex-wrap items-center justify-center gap-8 bg-bluTro px-32 py-16 xl:justify-between">
+    <footer className="flex w-full flex-wrap items-center justify-center gap-8 bg-bluTro px-32 py-16 2xl:justify-between">
       <div className="flex flex-col items-center xl:items-start gap-8">
         <div
           className={`flex gap-4 ${ibmPlexSans.className} flex-col items-center sm:flex-row`}
@@ -31,7 +31,7 @@ const Footer = () => {
           <p>Tutti i diritti riservati</p>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-16 text-center md:text-start 2xl:gap-32">
+      <div className="flex flex-col justify-center gap-16 text-center md:flex-row md:text-start 2xl:gap-32">
         <div className="flex flex-col gap-4">
           <h1 className=" text-[1.5rem] font-semibold">Indice</h1>
           <div>
@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <h1 className=" mb-4 text-[1.5rem] font-semibold leading-[1]">
+          <h1 className=" mb-4 text-[1.5rem] font-semibold leading-[1] text-center">
             Rimani aggiornato
           </h1>
           <Input1
