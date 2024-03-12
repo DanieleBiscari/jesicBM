@@ -20,7 +20,7 @@ export default function Page() {
           textSize={"1rem"}
           borderColor={"#E6E4D9"}
           backgroundColor={""}
-          url={"./servicepage"}
+          url={"https://www.linkedin.com/company/bm-attrazione-investimenti/"}
           className={"w-[60%]"}
         />
       </div>

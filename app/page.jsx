@@ -8,26 +8,24 @@ import searchUp from "@/public/img/arrowUp.svg";
 import closeImg from "@/public/img/close.svg";
 import styles from "@/app/styles/landing.module.css";
 import { ibmPlexSans, roboto } from "@/app/ui/fonts";
-// import BannerLanding from "./ui/components/bannerLanding";
 import Input1 from "./ui/components/input1";
 import Button1 from "./ui/components/button1";
 import CookieModal from "./ui/components/cookieModal";
+// import BannerLanding from "./ui/components/bannerLanding";
 
 export default function LandingPage() {
   const cities = ["troina"];
-  const infoModal = {
+  const infoCookieModal = {
     title: "DIAMO VALORE ALLA TUA PRIVACY",
-    text: 'Questo sito web utilizza cookie essenziali per offrire un\'esperienza piacevole e garantirne il corretto funzionamento e non possono essere disattivati. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su "accetto tutto" acconsenti l’utilizzo di questi cookie.',
-    buttonLeftText: "accetto solo essenziali",
+    text: 'Questo sito web utilizza cookie essenziali per offrire un\'esperienza piacevole e garantirne il corretto funzionamento. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su "accetto tutto" acconsenti l’utilizzo di questi cookie.',
+    buttonLeftText: "non accettare",
     buttonRightText: "accetto tutto",
     urlToMore:
-      "https://www.cookiebot.com/en/privacy-policy-generator-gdpr/?utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=cb_dm_ww_eng_dsa_search_prf_lead_n_ca&utm_ad_group=ww-en-blog-en&gclid=Cj0KCQiAqsitBhDlARIsAGMR1Rj0mPHYgA3qCw_Rir3XCxR5jsW26qWLk0Ok7Tz-t_Z0aFhFzgsAe14aAgcHEALw_wcB",
+      "https://cookieinformation.com/it/che-cose-un-cookie",
   };
-
   const searchButtonRef = useRef();
   const [suggestionArray, setSuggestionArray] = useState([]);
   const [toPageUi, setToPageUi] = useState(false);
-  const [seeCookieModal, setSeeCookieModal] = useState(true);
 
   function handleSearchClick() {
     if (suggestionArray.length === 0) {
@@ -89,6 +87,15 @@ export default function LandingPage() {
 
   return (
     <section className=" flex h-screen w-screen">
+      <CookieModal
+        title={infoCookieModal.title}
+        text={infoCookieModal.text}
+        buttonLeftText={infoCookieModal.buttonLeftText}
+        buttonRightText={infoCookieModal.buttonRightText}
+        urlToMore={infoCookieModal.urlToMore}
+      />
+
+      {/* <CookieConsent></CookieConsent> */}
       <div
         className={`${styles.bgLanding} flex w-screen flex-col justify-between md:w-1/2`}
       >
@@ -188,20 +195,6 @@ export default function LandingPage() {
           fascino ai nostri centri storici.
         </p>
       </div>
-      {seeCookieModal ? (
-        <div className="absolute h-full w-full bg-slate-300 bg-opacity-30 z-0">
-          <CookieModal
-            title={infoModal.title}
-            text={infoModal.text}
-            buttonLeftText={infoModal.buttonLeftText}
-            buttonRightText={infoModal.buttonRightText}
-            urlToMore={infoModal.urlToMore}
-            setSeeCookieModal={setSeeCookieModal}
-          />
-        </div>
-      ) : (
-        <></>
-      )}
     </section>
   );
 }
