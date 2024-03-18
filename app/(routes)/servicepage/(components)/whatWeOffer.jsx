@@ -6,7 +6,6 @@ import serviceImg2 from "@/public/img/serviceImg2.svg";
 import serviceImg3 from "@/public/img/serviceImg3.png";
 import serviceImg4 from "@/public/img/serviceImg4.png";
 import whatWeOffer from "@/public/img/whatWeOffer.png";
-import videoPlaceholder from "@/public/img/videoPlaceHolder.png";
 import CardServiceInPresence from "./cardServiceInPresence";
 
 const WhatWeOffer = ({ styles, clicked, setClicked }) => {
@@ -82,10 +81,13 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
 
   return (
     <div>
-      <div id="remoteService" className="flex h-full w-full columns-2 gap-8 px-12 pb-10 pt-40 justify-center">
+      <div
+        id="remoteService"
+        className="flex h-full w-full columns-2 justify-center gap-8 px-12 pb-10 pt-40"
+      >
         <div className="h-full lg:w-[60%]">
           <h1
-            className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.5rem,3.5vw,3.5rem)] mb-8`}
+            className={`${ebGaramond.className} mb-8 ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.5rem,3.5vw,3.5rem)]`}
           >
             <b className=" font-bold">I nostri servizi da remoto</b> <br /> per
             investire a Troina
@@ -116,42 +118,41 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
             alt="what we offer image"
             height={620}
             width={1200}
-            className="object-cover mix-blend-screen rounded-3xl"
+            className="rounded-3xl object-cover mix-blend-screen"
           ></Image>
         </div>
       </div>
 
-      <div id="presenceService" className="flex w-full columns-2 gap-8 px-12 py-36">
-        <div className="hidden w-[40%] items-center justify-center lg:flex">
-          {/* cancellami */}
-          <div>questo dovrà essere un video -{"->"}</div>
-          {/* cancellami */}
-          <Image
-            src={videoPlaceholder}
-            alt="what we offer image"
-            height={620}
-            width={1200}
-            className="aspect-square w-[80%]"
-          ></Image>
+      <div
+        id="presenceService"
+        className="flex flex-col lg:flex-row w-full columns-2 items-center justify-around gap-24 px-12 py-36"
+      >
+        <div className="flex justify-center">
+          <video
+            controls
+            width={920}
+            className="shadow-xl shadow-slate-900"
+            poster="/img/videoPlaceholder.png"
+          >
+            <source src="/video/video1920.mp4" type="video/mp4" />
+          </video>
         </div>
 
-        <div className="flex w-full flex-col  lg:w-[60%]">
+        <div className="flex flex-col">
           <h1
             className={`${ebGaramond.className} ml-4 leading-[100%] text-gialloTro [font-size:_clamp(1.5rem,3.5vw,3.5rem)]`}
           >
             <b className=" font-bold">I nostri servizi in presenza</b> <br />
             per investire a Troina
           </h1>
-          <div className="">
-            <CardServiceInPresence
-              styles={styles}
-              title={inPresenceServices.title}
-              buttonsContent={inPresenceServices.buttonsContent}
-              subtitle={inPresenceServices.subtitle}
-              text={inPresenceServices.text}
-              footerText={inPresenceServices.footerText}
-            />
-          </div>
+          <CardServiceInPresence
+            styles={styles}
+            title={inPresenceServices.title}
+            buttonsContent={inPresenceServices.buttonsContent}
+            subtitle={inPresenceServices.subtitle}
+            text={inPresenceServices.text}
+            footerText={inPresenceServices.footerText}
+          />
         </div>
       </div>
     </div>
