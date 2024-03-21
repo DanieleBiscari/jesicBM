@@ -158,7 +158,7 @@ const WhyUs = ({ styles }) => {
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
-                  Investire qui significa contribuire alla tutela dell'ambiente
+                  Investire qui significa contribuire alla tutela dell&apos;ambiente
                   e alla crescita sostenibile.
                 </p>
               </div>

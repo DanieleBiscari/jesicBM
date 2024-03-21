@@ -64,7 +64,7 @@ const Presentation = ({ styles }) => {
               distingue per la sua ricca storia e autentica bellezza. Circondato
               da paesaggi mozzafiato, Troina vanta un patrimonio culturale
               unico, testimoniato dai suoi antichi monumenti e dalla vivace
-              tradizione locale. Con le sue stradine pittoresche e l'accoglienza
+              tradizione locale. Con le sue stradine pittoresche e l&apos;accoglienza
               calorosa della comunità, Troina è un tesoro nascosto che affascina
               chiunque abbia il privilegio di esplorarla.
             </p>
@@ -88,7 +88,7 @@ const Presentation = ({ styles }) => {
           distingue per la sua ricca storia e autentica bellezza. Circondato da
           paesaggi mozzafiato, Troina vanta un patrimonio culturale unico,
           testimoniato dai suoi antichi monumenti e dalla vivace tradizione
-          locale. Con le sue stradine pittoresche e l'accoglienza calorosa della
+          locale. Con le sue stradine pittoresche e l&apos;accoglienza calorosa della
           comunità, Troina è un tesoro nascosto che affascina chiunque abbia il
           privilegio di esplorarla.
         </p>

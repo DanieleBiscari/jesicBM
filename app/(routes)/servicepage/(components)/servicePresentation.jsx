@@ -16,8 +16,8 @@ const ServicePresentation = ({ styles }) => {
           <b className={styles.enfTextPresentation}>burocratica</b>, nella{" "}
           <b className={styles.enfTextPresentation}>progettazione</b> e nella{" "}
           <b className={styles.enfTextPresentation}>ristrutturazione</b>,
-          mettendovi in contatto con tutte le figure utili all'investimento fino
-          alla consegna completa dell'immobile. <br />
+          mettendovi in contatto con tutte le figure utili all&apos;investimento fino
+          alla consegna completa dell&apos;immobile. <br />
           <b className={styles.enfTextPresentation}>
             Il tuo sogno, la nostra missione, il futuro di Troina.
           </b>
