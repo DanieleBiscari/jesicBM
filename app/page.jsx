@@ -11,17 +11,19 @@ import { ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Input1 from "./ui/components/input1";
 import Button1 from "./ui/components/button1";
 import CookieModal from "./ui/components/cookieModal";
+import useLang from "./hooks/useLang";
 // import BannerLanding from "./ui/components/bannerLanding";
 
 export default function LandingPage() {
+  const { lang } = useLang();
+
   const cities = ["troina"];
   const infoCookieModal = {
     title: "DIAMO VALORE ALLA TUA PRIVACY",
     text: 'Questo sito web utilizza cookie essenziali per offrire un\'esperienza piacevole e garantirne il corretto funzionamento. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su "accetto tutto" acconsenti l’utilizzo di questi cookie.',
     buttonLeftText: "non accettare",
     buttonRightText: "accetto tutto",
-    urlToMore:
-      "https://cookieinformation.com/it/che-cose-un-cookie",
+    urlToMore: "https://cookieinformation.com/it/che-cose-un-cookie",
   };
   const searchButtonRef = useRef();
   const [suggestionArray, setSuggestionArray] = useState([]);
@@ -114,7 +116,7 @@ export default function LandingPage() {
                 " mb-8 text-center text-4xl md:text-start"
               }
             >
-              Dove vorresti <br /> andare?
+              {lang?.landing.where1} <br/> {lang?.landing.where2} 
             </h1>
             <div
               className={`${toPageUi ? "hidden" : "flex"} w-full justify-center md:justify-start`}
@@ -165,7 +167,7 @@ export default function LandingPage() {
               </div>
               <div>
                 <Button1
-                  name={"Vai alla pagina"}
+                  name={lang?.landing.button}
                   borderColor={"#F5A400"}
                   textColor={"#F5A400"}
                   url={"/homepage"}
@@ -189,10 +191,7 @@ export default function LandingPage() {
         <p
           className={`${roboto.className} mb-20 w-[80%] text-justify antialiased`}
         >
-          Investire nella riqualificazione dei Sobborghi Italiani è una missione
-          per noi molto importante. Non solo per salvaguardare il nostro
-          patrimonio culturale, ma per creare comunità e restituire il loro
-          fascino ai nostri centri storici.
+          {lang?.landing.paragraph}
         </p>
       </div>
     </section>

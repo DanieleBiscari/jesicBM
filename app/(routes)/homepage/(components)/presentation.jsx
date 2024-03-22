@@ -1,4 +1,5 @@
 "use client";
+import useLang from "@/app/hooks/useLang";
 import Button1 from "@/app/ui/components/button1";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import logo from "@/public/img/logo.svg";
@@ -9,6 +10,7 @@ const Presentation = ({ styles }) => {
   // const languageArray = ["IT", "EN"];
   // const [language, setLanguague] = useState("IT");
   const [animationShowed, setAnimationShowed] = useState(false);
+  const { lang } = useLang();
 
   // function changeLanguage(currentLanguage) {
   //   languageArray.map((language, _id) => {
@@ -31,7 +33,7 @@ const Presentation = ({ styles }) => {
   }
 
   return (
-    <div className="flex md:min-h-screen w-screen">
+    <div className="flex w-screen md:min-h-screen">
       {/* Interfaccia schermi larghi */}
       <div className="hidden min-h-screen w-screen md:flex">
         <div className="flex basis-[50%] flex-col items-center justify-center">
@@ -47,7 +49,7 @@ const Presentation = ({ styles }) => {
               <h2
                 className={`${ibmPlexSans.className} mb-8 text-center text-[2rem] font-semibold leading-8`}
               >
-                attrazione <br /> investimenti
+                Attrazione <br /> Investimenti
               </h2>
               <Button1
                 name={"I NOSTRI SERVIZI"}
@@ -60,37 +62,25 @@ const Presentation = ({ styles }) => {
             <p
               className={`${roboto.className} ${styles.blurredDiv} ${styles.animationON} ${styles.pPresentation} absolute left-[95%] z-10 h-full w-[45vw] rounded-r-2xl p-4 pl-8 ${animationShowed ? "" : "hidden"}`}
             >
-              <b>Troina</b>, incantevole comune nella provincia di Enna, si
-              distingue per la sua ricca storia e autentica bellezza. Circondato
-              da paesaggi mozzafiato, Troina vanta un patrimonio culturale
-              unico, testimoniato dai suoi antichi monumenti e dalla vivace
-              tradizione locale. Con le sue stradine pittoresche e l&apos;accoglienza
-              calorosa della comunità, Troina è un tesoro nascosto che affascina
-              chiunque abbia il privilegio di esplorarla.
+              {lang?.homepage.description}
             </p>
           </div>
         </div>
         <div className="ml-auto mr-24 mt-20">
-          <button
+          <div
             className={`${ebGaramond.className} text-[3rem] font-semibold ${styles.languageColor} flex justify-start`}
             // onClick={() => changeLanguage(language)}
           >
             {/* Troina ({language}) */}
             Troina(EN)
-          </button>
+          </div>
         </div>
       </div>
 
       {/* Interfaccia schermi mobile */}
       <div className="mt-40 bg-bluTro pb-8 md:hidden">
         <p className={`${roboto.className} ${styles.pPresentation} px-8 py-4`}>
-          <b>Troina</b>, incantevole comune nella provincia di Enna, si
-          distingue per la sua ricca storia e autentica bellezza. Circondato da
-          paesaggi mozzafiato, Troina vanta un patrimonio culturale unico,
-          testimoniato dai suoi antichi monumenti e dalla vivace tradizione
-          locale. Con le sue stradine pittoresche e l&apos;accoglienza calorosa della
-          comunità, Troina è un tesoro nascosto che affascina chiunque abbia il
-          privilegio di esplorarla.
+          {lang?.homepage.description}
         </p>
         <div className="mx-8 flex flex-wrap items-center justify-evenly gap-4 rounded-3xl bg-[#E6E4D9] bg-opacity-5 p-8">
           <div className="flex flex-col items-center justify-center gap-2">
@@ -110,7 +100,7 @@ const Presentation = ({ styles }) => {
           <div>
             <Button1
               type={"presentation"}
-              name={"I NOSTRI SERVIZI"}
+              name={lang?.homepage.button2}
               borderColor={"white"}
               textColor={"white"}
               url={"./servicepage"}

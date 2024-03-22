@@ -8,9 +8,11 @@ import location from "@/public/img/location.svg";
 import life from "@/public/img/life.svg";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import { useState } from "react";
+import useLang from "@/app/hooks/useLang";
 
 const WhyUs = ({ styles }) => {
   const [overedItem, setOveredItem] = useState(null);
+  const {lang} = useLang()
 
   function handleOver(id) {
     setOveredItem(id);
@@ -37,13 +39,12 @@ const WhyUs = ({ styles }) => {
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
-                  Convenienza
+                  {lang?.homepage.circleTitle1}
                 </h3>
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
-                  Elevata qualità di vita senza sostenere oneri finanziari
-                  eccessivi.
+                  {lang?.homepage.circleText1}
                 </p>
               </div>
             ) : (
@@ -66,13 +67,12 @@ const WhyUs = ({ styles }) => {
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
-                  Comunità
+                  {lang?.homepage.circleTitle2}
                 </h3>
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
-                  Calorosa accoglienza. Senso di appartenenza e solidarietà e
-                  facile integrazione.
+                  {lang?.homepage.circleText2}
                 </p>
               </div>
             ) : (
@@ -95,13 +95,12 @@ const WhyUs = ({ styles }) => {
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
-                  Stile di vita
+                  {lang?.homepage.circleTitle3}
                 </h3>
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
-                  Una comunità per vivere a ritmi sostenibili, più lentamente e
-                  con meno frenesia.
+                  {lang?.homepage.circleText3}
                 </p>
               </div>
             ) : (
@@ -124,13 +123,12 @@ const WhyUs = ({ styles }) => {
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
-                  Location
+                  {lang?.homepage.circleTitle4}
                 </h3>
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
-                  A soli 20 minuti dal parco dei Nebrodi e ad un’ora
-                  dall’aeroporto internazionale di Catania.
+                  {lang?.homepage.circleText4}
                 </p>
               </div>
             ) : (
@@ -153,13 +151,12 @@ const WhyUs = ({ styles }) => {
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
-                  Sostenibilità
+                  {lang?.homepage.circleTitle5}
                 </h3>
                 <p
                   className={`${roboto.className} [font-size:_clamp(.6rem,.9vw,1.1rem)]`}
                 >
-                  Investire qui significa contribuire alla tutela dell&apos;ambiente
-                  e alla crescita sostenibile.
+                  {lang?.homepage.circleText5}
                 </p>
               </div>
             ) : (
@@ -179,19 +176,15 @@ const WhyUs = ({ styles }) => {
             className={`${ebGaramond.className} ${styles.h1Custom} mb-8 leading-[1]`}
             style={{ color: "#F5A400" }}
           >
-            Perché investire a Troina?
+            {lang?.homepage.title}
           </h1>
           <p
             className={`${roboto.className} mb-12 xl:pe-32 ${styles.pPresentation}`}
           >
-            Troina è molto più di una semplice cittadina dove comprare casa. Il
-            nostro obiettivo è riuscire a riqualificare sostenibilmente il suo
-            centro storico e creare una comunità che possa abbracciare lo stile
-            di vita del luogo, recuperandolo e portando nuovo valore ad una
-            terra con molto potenziale.
+            {lang?.homepage.whyInvest}
           </p>
           <Button1
-            name={"SCOPRI DI PIÙ →"}
+            name={lang?.homepage.button}
             textColor={"#F5A400"}
             textSize={"1rem"}
             borderColor={"#F5A400"}
