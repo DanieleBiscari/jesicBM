@@ -7,17 +7,19 @@ import styles from "@/app/styles/navbar.module.css";
 import Link from "next/link";
 import Input1 from "./input1";
 import { useRef } from "react";
+import useLang from "@/app/hooks/useLang";
 
 const Footer = () => {
   const inputRef = useRef();
+  const {lang} = useLang();
 
   function handleSearch(){
     inputRef.current.value = ""
   }
 
   return (
-    <footer className="flex w-full flex-wrap items-center justify-center gap-8 bg-bluTro px-32 py-16 2xl:justify-between">
-      <div className="flex flex-col items-center xl:items-start gap-8">
+    <footer className="flex w-full flex-wrap items-center justify-center gap-8 xl:gap-32  bg-bluTro px-32 py-16 2xl:justify-between">
+      <div className="flex flex-col items-center 2xl:items-start gap-8">
         <div
           className={`flex gap-4 ${ibmPlexSans.className} flex-col items-center sm:flex-row`}
         >
@@ -27,8 +29,8 @@ const Footer = () => {
           </h2>
         </div>
         <div className="flex flex-col gap-2 text-center 2xl:text-start">
-          <p>Copyright © 2023 BM Attrazione Investimenti</p>
-          <p>Tutti i diritti riservati</p>
+          <p>Copyright © 2024 BM Attrazione Investimenti</p>
+          <p>{lang?.footer.diritti}</p>
         </div>
       </div>
       <div className="flex flex-col justify-center gap-16 text-center md:flex-row md:text-start 2xl:gap-32">
@@ -47,7 +49,7 @@ const Footer = () => {
               href="./servicepage"
               className={`${styles.hoverUnderlineWhite} relative`}
             >
-              Servizi
+              {lang?.footer.servizi}
             </Link>
           </div>
           <div>
@@ -63,11 +65,11 @@ const Footer = () => {
               href="./pa"
               className={`${styles.hoverUnderlineWhite} relative`}
             >
-              Servizi PA
+              {lang?.footer.servizi} PA
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        {/* <div className="flex flex-col gap-4">
           <h1 className=" text-[1.5rem] font-semibold">Supporto</h1>
           <div>
             <Link
@@ -85,13 +87,13 @@ const Footer = () => {
               Privacy policy
             </Link>
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col">
           <h1 className=" mb-4 text-[1.5rem] font-semibold leading-[1] text-center">
-            Rimani aggiornato
+          {lang?.footer.aggiornato}
           </h1>
           <Input1
-            placeholder={"la tua e-mail"}
+            placeholder={lang?.footer.placeholder}
             invert={true}
             urlImg={send}
             inputRef={inputRef}

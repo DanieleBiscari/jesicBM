@@ -3,11 +3,13 @@ import Image from "next/image";
 import logo from "@/public/img/logo.svg";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Button1 from "@/app/ui/components/button1";
+import useLang from "@/app/hooks/useLang";
 
 export default function Page() {
+  const { lang } = useLang();
   return (
     <div
-      className={`${styles.bgMain} mb:pb-0 flex w-full flex-col justify-center gap-16 pb-20 pt-32 md:h-screen md:flex-row md:justify-evenly md:pt-0 md:pb-0`}
+      className={`${styles.bgMain} mb:pb-0 flex w-full flex-col justify-center gap-16 pb-20 pt-32 md:h-screen md:flex-row md:justify-evenly md:pb-0 md:pt-0`}
     >
       <div
         className={`flex flex-col items-center justify-center gap-10 ${ibmPlexSans.className}`}
@@ -16,7 +18,7 @@ export default function Page() {
           <Image
             src={logo}
             alt="logo"
-            className="h-40 w-40 px-4 md:h-60 md:w-60 xl:w-80 xl:h-80"
+            className="h-40 w-40 px-4 md:h-60 md:w-60 xl:h-80 xl:w-80"
             width={240}
             height={240}
           />
@@ -36,13 +38,11 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col items-center justify-center italic [font-size:_clamp(1.5rem,2.6vw,2.6rem)]">
-        <div className="w-84 md:w-80 px-8 md:p-0">
+        <div className="w-84 px-8 md:w-80 md:p-0">
           <p className="font-bold text-[#E6E4D9] text-opacity-80">
-            Il ponte tra te e i piccoli borghi italiani.
+            {lang?.contacts.p1}
           </p>
-          <p className="text-[#E6E4D9] text-opacity-50">
-            Riqualificazione sostenibile dei centri storici Italiani.
-          </p>
+          <p className="text-[#E6E4D9] text-opacity-50">{lang?.contacts.p2}</p>
         </div>
       </div>
     </div>

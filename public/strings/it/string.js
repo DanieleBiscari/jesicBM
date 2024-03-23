@@ -79,17 +79,112 @@ const homepage = {
   comprando3: "essere restaurata",
 };
 
-const services =  { 
-}
-const contacts =  { 
-}
-const pa =  { 
-}
+const services = {
+  bmAssist: "BM vi assisterà nella fase",
+  buroc: "burocratica",
+  nella: ", nella",
+  proget: "progettazione",
+  nella2: "e nella",
+  ristrut: "ristrutturazione",
+  mettendovi:
+    ", mettendovi in contatto con tutte le figure utili all'investimento fino alla consegna completa dell'immobile.",
+  sogno: "Il tuo sogno, la nostra missione, il futuro di Troina.",
+  remoto: "I nostri servizi da remoto",
+  presenza: "I nostri servizi in presenza",
+  action: "Action plan con BM",
+  senza: "Senza BM Attrazione Investimenti",
+  con: "Con BM Attrazione Investimenti",
+  p1: "Il nostro obiettivo è",
+  p2: "alleggerire il carico burocratico dei nostri clienti",
+  p3: ", consentendo loro di concentrarsi sulle decisioni di investimento con meno stress possibile, mentre noi ci occupiamo della",
+  p4: "ricerca",
+  p5: ", della",
+  p6: "selezione",
+  p7: ", e del",
+  p8: "coordinamento delle figure professionali",
+  p9: "necessarie per tutte le fasi: dal primo contatto con l'investitore, alla rigenerazione dell'immobile.",
+  p10: "Collaboriamo con",
+  p11: "esperti qualificati",
+  p12: "in diversi settori, tra cui: Agenti immobiliari, architetti, ingegneri, avvocati, studi notarili, imprese, e pubblica amministrazione.",
+  p13: "Puoi affidarti a noi per gestire le sfide tecniche burocratiche legate al tuo investimento nel nostro territorio.",
+  p14: "La nostra profonda conoscenza della comunità ci consentono di semplificare il processo, fornendo un servizio completo e personalizzato in base alle tue esigenze",
+  button: "scopri di più",
+  button2: "CONTATTACI",
+  s1s: "VIDEOCHIAMATA 45 minuti con un consulente e con un traduttore professionista",
+  s1t: "Insieme possiamo trovare il compromesso migliore e la soluzione adatta alle vostre esigenze. La qualità che dedichiamo ad ogni singolo nostro cliente è anche parte della cultura della nostra azienda.",
+  s2s: "We Talk Service + Servizio fotografico & Piazzamento + Piano d'acquisto",
+  s2t: "Oltre a delle chiamate per comprendere le vostre esigenze e necessità, fugare eventuali dubbi,  condurremo delle analisi di fattibilità SWOT sulla vostra futura abitazione e vi proporremo una stima dei costi d'acquisto (spese notarili, agenzia immobiliare).",
+  s3s: "Silver Service + VIDEO DEGLI INTERNI + PIANO D'INVESTIMENTO",
+  s3t1: "Oltre a delle chiamate per conoscerci ed iniziare a lavorare per voi, contatteremo delle maestranze locali che forniranno stime per un'idea del costo del rinnovamento del fabbricato più accurata.",
+  s3t2: "Condurremo delle riprese approfondite di quella che sarà la vostra futura abitazione, per valutare meglio le condizioni dell'immobile.",
+  s4s: "DISEGNI DI PROGETTAZIONE, PROPOSTA DI PROGETTO & STIMA DEI COSTI",
+  s4t1: "Studieremo come applicare il bonus PNRR al momento vigente in Italia per il recupero del costruito.",
+  s4t2: "Contatteremo delle maestranze locali che forniranno stime per un'idea del costo del rinnovamento del fabbricato più accurata.",
+  presT: "Tour delle case ad 1€",
+  presST: "e non solo...",
+  presT1: "Traduttore, Kit di pronto soccorso,",
+  presT2: "Consulenza & assistenza",
+  btn1: "MEZZA GIORNATA",
+  btn2: "TUTTO IL GIORNO",
+  foot: "*fino a 4 persone, con €30 euro in più per ogni altra persona",
+  inostri: "I nostri servizi da remoto",
+  inostri2: "per investire a Troina",
+  inostri3: "I nostri servizi in presenza",
+  videochiamata: "VIDEOCHIAMATA",
+  minuti: "45 minuti con un consulente e con un traduttore professionista",
+  apartire: "a partire da €",
+  mostra: "MOSTRA ALTRO",
+  apn1: "Primo Contatto",
+  apn2: "Comprensione & decisione",
+  apn3: "attuazione del progetto",
+  apb1: "1. Più informazioni",
+  apt1: "Scrivi ad uno dei comuni in cui B.M. gestisce il progetto Case a 1 €",
+  apb2: "2. Selezione",
+  apt2: "Vi aiuteremo a capire se il Borgo che avete scelto è coerente con ciò che state cercando",
+  apb3: "3. Conoscenza",
+  apt3: "Ti aiuteremo a conoscere la comunità e le opportunità di investimento.",
+  apb4: "4. Scelta",
+  apt4: "Ti aiuteremo nella scelta dell'investimento più adatto, in maniera etica e consapevole",
+  apb5: "5. Investimento",
+  apt5: "Saremo al tuo fianco, nella gestione della burocrazia e nella scelta di professionisti imprese locali",
+  apb6: "6. Lavori",
+  apt6: "Ti aiuteremo durante i lavori di investimento, offrendo assistenza nella tua lingua attraverso messaggistica istantanea e servizi remoti.",
+  apb7: "7. Gira la chiave",
+  apt7: "Godetevi la vostra nuova casa a Troina!",
+};
+const contacts = {
+  p1: "Il ponte tra te e i piccoli borghi italiani.",
+  p2: "Riqualificazione sostenibile dei centri storici Italiani.",
+};
+const pa = {
+  serviziper: "Servizi per la",
+  publica: "Pubblica Amministrazione",
+  button: "Contattaci",
+  l1: "Gestione del progetto",
+  l2: "Modulistica",
+  l3: "Analisi dati",
+  l4: "Reportistica",
+  l5: "Community Consulenza di marketing (relativa al progetto“Case a 1 €”)",
+  l6: "Gestione Sito-vetrina Turistici-immobiliari",
+};
+const navbar = {
+  servizi: "Servizi",
+  cont: "Contatti",
+};
+const footer = {
+  diritti: "Tutti i diritti riservati",
+  servizi: "Servizi",
+  cont: "Contatti",
+  aggiornato: "Rimani aggiornato",
+  placeholder: "la tua e-mail",
+};
 
 export const it = {
   landing,
   homepage,
   services,
   contacts,
-  pa
+  pa,
+  navbar,
+  footer,
 };

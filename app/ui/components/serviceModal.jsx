@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import arrowDown from "@/public/img/arrowDownWhite.svg";
 import Button1 from "./button1";
+import useLang from "@/app/hooks/useLang";
 
 const ServiceModal = ({
   styles,
@@ -14,7 +15,9 @@ const ServiceModal = ({
   clicked,
   setClicked,
 }) => {
+  const {lang} = useLang()
   if (clicked === title) {
+
     return (
       <div
         className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex max-h-[90vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:pb-16 lg:pt-8 overflow-y-scroll sm:overflow-y-hidden`}
@@ -37,12 +40,11 @@ const ServiceModal = ({
               >
                 {title}
               </h1>
-              {subtitle.includes("VIDEOCHIAMATA") ? (
+              {subtitle.includes(lang?.services.videochiamata) ? (
                 <h2
                   className={`${ibmPlexSans.className} font-bold leading-[150%] [font-size:_clamp(.8rem,1.3vw,1.3rem)]`}
                 >
-                  VIDEOCHIAMATA <br /> 45 minuti con un consulente e con un
-                  traduttore professionista
+                  {lang?.services.videochiamata} <br /> {lang?.services.minuti}
                 </h2>
               ) : (
                 <h2
@@ -67,11 +69,12 @@ const ServiceModal = ({
                 <p
                   className={`${ibmPlexSans.className} font-light leading-[150%] [font-size:_clamp(1rem,2.2vw,2.2rem)]`}
                 >
-                  a partire da €{price}
+                  {lang?.services.apartire}{price}
                 </p>
                 <div>
                   <Button1
-                    name={"CONTATTACI"}
+                    name={lang?.services.button2}
+                    url={"/contacts"}
                     textSize={"1rem"}
                     borderColor={"#E6E4D9"}
                     textColor={"#E6E4D9"}
@@ -104,8 +107,7 @@ const ServiceModal = ({
             <h2
               className={`${ibmPlexSans.className} font-bold leading-[150%] [font-size:_clamp(.8rem,1.3vw,1.3rem)]`}
             >
-              VIDEOCHIAMATA <br /> 45 minuti con un consulente e con un
-              traduttore professionista
+              {lang?.services.videochiamata} <br /> {lang?.services.minuti}
             </h2>
           ) : (
             <h2
@@ -132,7 +134,7 @@ const ServiceModal = ({
             className={`${ibmPlexSans.className} relative z-10 cursor-pointer font-light leading-[150%] [font-size:_clamp(1rem,1.2vw,1.2rem)]`}
             onClick={() => handleClick(title)}
           >
-            MOSTRA ALTRO
+            {lang?.services.mostra}
           </p>
           <div
             className={`${styles.linearSfocatura} absolute bottom-2 h-20 w-full`}

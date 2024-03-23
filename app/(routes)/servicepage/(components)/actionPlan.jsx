@@ -2,51 +2,53 @@ import Button1 from "@/app/ui/components/button1";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Image from "next/image";
 import backgroundActionPlan from "@/public/img/backgroundActionPlan.png";
+import useLang from "@/app/hooks/useLang";
 
 const ActionPlan = ({ styles, windowWidth }) => {
+  const {lang} = useLang()
   let counter = 0;
   let counterOuter = 0;
   const actionPlan = [
     {
-      name: "Primo Contatto",
+      name: lang?.services.apn1,
       service: [
         {
-          buttonName: "1. Più informazioni",
-          text: "Scrivi ad uno dei comuni in cui B.M. gestisce il progetto Case a 1 €",
+          buttonName: lang?.services.apb1,
+          text: lang?.services.apt1,
         },
         {
-          buttonName: "2. Selezione",
-          text: "Vi aiuteremo a capire se il Borgo che avete scelto è coerente con ciò che state cercando",
+          buttonName: lang?.services.apb2,
+          text: lang?.services.apt2,
         },
       ],
     },
     {
-      name: "Comprensione & decisione",
+      name: lang?.services.apn2,
       service: [
         {
-          buttonName: "3. Conoscenza",
-          text: "Ti aiuteremo a conoscere la comunità e le opportunità di investimento.",
+          buttonName: lang?.services.apb3,
+          text: lang?.services.apt3,
         },
         {
-          buttonName: "4. Scelta",
-          text: "Ti aiuteremo nella scelta dell’investimento più adatto, in maniera etica e consapevole",
+          buttonName: lang?.services.apb4,
+          text: lang?.services.apt4,
         },
         {
-          buttonName: "5. Investimento",
-          text: "Saremo al tuo fianco, nella gestione della burocrazia e nella scelta di professionisti imprese locali",
+          buttonName: lang?.services.apb5,
+          text: lang?.services.apt5,
         },
       ],
     },
     {
-      name: "attuazione del progetto",
+      name: lang?.services.apn3,
       service: [
         {
-          buttonName: "6. Lavori",
-          text: "Ti aiuteremo durante i lavori di investimento, offrendo assistenza nella tua lingua attraverso messaggistica istantanea e servizi remoti.",
+          buttonName: lang?.services.apb6,
+          text: lang?.services.apt6,
         },
         {
-          buttonName: "7. Gira la chiave",
-          text: "Godetevi la vostra nuova casa a Troina!",
+          buttonName: lang?.services.apb7,
+          text: lang?.services.apt7,
         },
       ],
     },

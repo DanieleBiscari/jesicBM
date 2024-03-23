@@ -3,8 +3,11 @@ import Button1 from "@/app/ui/components/button1";
 import Image from "next/image";
 import serviceTree1 from "@/public/img/serviceTree1.svg";
 import serviceTree2 from "@/public/img/serviceTree2.svg";
+import useLang from "@/app/hooks/useLang";
 
 const ServiceWhyUs = ({ styles }) => {
+  const {lang} = useLang()
+
   return (
     <div className="flex h-full columns-2 flex-col gap-20 px-4 py-24 lg:flex-row">
       <div className="mr-auto flex flex-col items-center lg:w-1/2">
@@ -12,7 +15,7 @@ const ServiceWhyUs = ({ styles }) => {
           <h1
             className={`${ibmPlexSans.className} mb-6 font-[700] text-bluTro opacity-50 [font-size:_clamp(1.2rem,2vw,2rem)]`}
           >
-            Senza BM Attrazione Investimenti
+           {lang?.services.senza}
           </h1>
           <Image
             src={serviceTree1}
@@ -29,7 +32,7 @@ const ServiceWhyUs = ({ styles }) => {
           <h1
             className={`${ibmPlexSans.className} mb-6 font-[700] [font-size:_clamp(1.2rem,2vw,2rem)]`}
           >
-            Con BM Attrazione Investimenti
+            {lang?.services.con}
           </h1>
           <div className="flex gap-14">
             <Image
@@ -42,36 +45,28 @@ const ServiceWhyUs = ({ styles }) => {
 
             <div className="flex w-[100%] flex-col gap-8 px-4 [font-size:_clamp(.9rem,1.3vw,1.3rem)] lg:w-[60%]">
               <p>
-                Il nostro obiettivo è{" "}
-                <b>alleggerire il carico burocratico dei nostri clienti</b>,
-                consentendo loro di concentrarsi sulle decisioni di investimento
-                con meno stress possibile, mentre noi ci occupiamo della{" "}
-                <b>ricerca</b>, della <b>selezione</b>, e del{" "}
-                <b>coordinamento delle figure professionali</b> necessarie per
-                tutte le fasi: dal primo contatto con l’investitore, alla
-                rigenerazione dell’immobile.
+              {lang?.services.p1}{" "}
+                <b>{lang?.services.p2}</b>
+                {lang?.services.p3}{" "}
+                <b>{lang?.services.p4}</b>{lang?.services.p5} <b>{lang?.services.p6}</b>{lang?.services.p7}{" "}
+                <b>{lang?.services.p8}{" "}</b>{lang?.services.p9}
               </p>
               <p>
-                Collaboriamo con <b>esperti qualificati</b> in diversi settori,
-                tra cui: Agenti immobiliari, architetti, ingegneri, avvocati,
-                studi notarili, imprese, e pubblica amministrazione.
+              {lang?.services.p10} <b>{lang?.services.p11} </b>{lang?.services.p12}
               </p>
               <p>
                 <b>
-                  Puoi affidarti a noi per gestire le sfide tecniche
-                  burocratiche legate al tuo investimento nel nostro territorio.
+                {lang?.services.p13}
                 </b>
               </p>
               <p>
                 <b>
-                  La nostra profonda conoscenza della comunità ci consentono di
-                  semplificare il processo, fornendo un servizio completo e
-                  personalizzato in base alle tue esigenze
+                {lang?.services.p14}
                 </b>
               </p>
               <div className="flex">
                 <Button1
-                  name={"scopri di più"}
+                  name={lang?.services.button}
                   textColor={"#E6E4D9"}
                   textSize={"1rem"}
                   borderColor={""}

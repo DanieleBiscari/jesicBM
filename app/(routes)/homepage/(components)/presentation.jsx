@@ -52,7 +52,7 @@ const Presentation = ({ styles }) => {
                 Attrazione <br /> Investimenti
               </h2>
               <Button1
-                name={"I NOSTRI SERVIZI"}
+                name={lang?.homepage.button2}
                 textSize={"1.1rem"}
                 borderColor={"white"}
                 textColor={"white"}

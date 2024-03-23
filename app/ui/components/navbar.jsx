@@ -5,10 +5,12 @@ import logoBlue from "@/public/img/logoBlue.svg";
 import styles from "@/app/styles/navbar.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import useLang from "@/app/hooks/useLang";
 
 const Navbar = () => {
   const [hamburClicked, setHamburClicked] = useState(false);
   const [windowWidth, setWindowWidth] = useState(undefined);
+  const {lang} = useLang()
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,7 +75,7 @@ const Navbar = () => {
             className={`${styles.hoverUnderline} relative`}
             onClick={() => setHamburClicked(!hamburClicked)}
           >
-            Servizi
+            {lang?.navbar.servizi}
           </Link>
         </li>
         <li
@@ -84,7 +86,7 @@ const Navbar = () => {
             className={`${styles.hoverUnderline} relative`}
             onClick={() => setHamburClicked(!hamburClicked)}
           >
-            Contatti
+            {lang?.navbar.cont}
           </Link>
         </li>
         <li
@@ -95,7 +97,7 @@ const Navbar = () => {
             className={`${styles.hoverUnderline} relative`}
             onClick={() => setHamburClicked(!hamburClicked)}
           >
-            Servizi PA
+            {lang?.navbar.servizi} PA
           </Link>
         </li>
       </ul>
