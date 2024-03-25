@@ -3,6 +3,7 @@ import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import arrowDown from "@/public/img/arrowDownWhite.svg";
 import Button1 from "./button1";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const ServiceModal = ({
   styles,
@@ -15,12 +16,12 @@ const ServiceModal = ({
   clicked,
   setClicked,
 }) => {
-  const {lang} = useLang()
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
   if (clicked === title) {
-
     return (
       <div
-        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex max-h-[90vh] w-[80vw] columns-2 flex-col rounded-t-[52px] bg-bluTro px-12 py-4 lg:pb-16 lg:pt-8 overflow-y-scroll sm:overflow-y-hidden`}
+        className={`${styles.slideUpAnim} fixed bottom-0 left-[10%] z-30 flex max-h-[90vh] w-[80vw] columns-2 flex-col overflow-y-scroll rounded-t-[52px] bg-bluTro px-12 py-4 sm:overflow-y-hidden lg:pb-16 lg:pt-8`}
       >
         <div className="z-10 mx-auto mb-8 cursor-pointer p-2">
           <Image
@@ -69,7 +70,8 @@ const ServiceModal = ({
                 <p
                   className={`${ibmPlexSans.className} font-light leading-[150%] [font-size:_clamp(1rem,2.2vw,2.2rem)]`}
                 >
-                  {lang?.services.apartire}{price}
+                  {lang?.services.apartire}
+                  {price}
                 </p>
                 <div>
                   <Button1

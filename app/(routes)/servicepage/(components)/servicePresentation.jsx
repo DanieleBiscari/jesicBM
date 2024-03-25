@@ -4,15 +4,17 @@ import Image from "next/image";
 import arrowDown from "@/public/img/arrowDownWhite.svg";
 import { handleSmoothScroll } from "@/app/lib/bmlib";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const ServicePresentation = ({ styles }) => {
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   return (
     <div className="mx-auto flex h-full w-[80%] flex-col justify-evenly gap-4 py-16 sm:gap-0 lg:ml-20 lg:w-[50%]">
       <div className="h-full">
         <p className={`${styles.typoPresentation} ${roboto.className} mb-10`}>
-          {lang?.services.bmAssist}&nbsp; 
+          {lang?.services.bmAssist}&nbsp;
           <b className={styles.enfTextPresentation}>{lang?.services.buroc}</b>
           {lang?.services.nella}&nbsp;
           <b className={styles.enfTextPresentation}>

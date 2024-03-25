@@ -9,9 +9,10 @@ const CookieModal = ({
   buttonRightText,
   buttonLeftText,
   urlToMore,
+  otherText
 }) => {
   const [showConsent, setShowConsent] = useState(true);
-  
+
   useEffect(() => {
     setShowConsent(hasCookie("localConsent"));
     // setShowConsent(false); // for debug
@@ -20,21 +21,21 @@ const CookieModal = ({
   const handleClickAccept = () => {
     setShowConsent(true);
     setCookie("localConsent", "true", {});
-  }
+  };
   const handleClickRefuse = () => {
     setShowConsent(true);
     deleteCookie("localConsent");
-  }
+  };
 
   if (showConsent) {
     return null;
   } else
     return (
-      <div className="absolute z-1 h-full w-full bg-slate-300 bg-opacity-30">
+      <div className="z-1 absolute h-full w-full bg-slate-300 bg-opacity-30">
         <div className="absolute left-[10%] top-[8%] z-20 flex h-[85%] w-[80%] flex-col justify-center gap-4 rounded-3xl bg-biancoTro text-[#313131] shadow-2xl shadow-[black] sm:top-[25%] sm:h-1/2 lg:left-[33%] lg:top-[25%] lg:h-1/2 lg:w-1/3 ">
           <div className="px-8 md:px-16">
             <h1
-              className={`${ibmPlexSans.className} mb-4 font-bold [font-size:_clamp(1.2rem,1.4vw,1.4rem)] `}
+              className={`${ibmPlexSans.className} mb-4 font-bold [font-size:_clamp(1.2rem,1.4vw,1.4rem)] text-center`}
             >
               {title}
             </h1>
@@ -43,18 +44,20 @@ const CookieModal = ({
             >
               {text}{" "}
               <a className="text-[#13637E] underline" href={urlToMore}>
-                Leggi altro
+                {otherText}
               </a>
             </p>{" "}
           </div>
-          <div className="flex justify-around gap-4 p-4 sm:gap-0">
+          <div className="flex flex-wrap justify-around gap-4 p-4 sm:gap-0">
             <Button1
+              className={"min-w-32 text-center"}
               name={buttonLeftText}
               borderColor={"#13637E"}
               textColor={"#13637E"}
               handleClick={handleClickRefuse}
             ></Button1>
             <Button1
+              className={"min-w-32 text-center"}
               name={buttonRightText}
               borderColor={"#13637E"}
               backgroundColor={"#13637E"}

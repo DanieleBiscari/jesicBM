@@ -9,10 +9,12 @@ import life from "@/public/img/life.svg";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import { useState } from "react";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const WhyUs = ({ styles }) => {
   const [overedItem, setOveredItem] = useState(null);
-  const {lang} = useLang()
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   function handleOver(id) {
     setOveredItem(id);
@@ -63,7 +65,9 @@ const WhyUs = ({ styles }) => {
             className={`ms-24 h-[12vw] min-h-[8rem] w-[12vw] min-w-[8rem] self-end justify-self-start overflow-hidden rounded-[100%] border-4 border-white`}
           >
             {overedItem === 1 ? (
-              <div className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}>
+              <div
+                className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}
+              >
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
@@ -91,7 +95,9 @@ const WhyUs = ({ styles }) => {
             className={`col-span-2 h-[12vw] min-h-[8rem] w-[12vw] min-w-[8rem] place-self-center overflow-hidden rounded-[100%] border-4 border-white`}
           >
             {overedItem === 2 ? (
-              <div className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}>
+              <div
+                className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}
+              >
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
@@ -119,7 +125,9 @@ const WhyUs = ({ styles }) => {
             className={`me-24 h-[12vw] min-h-[8rem] w-[12vw] min-w-[8rem] self-start justify-self-end overflow-hidden rounded-[100%] border-4 border-white`}
           >
             {overedItem === 3 ? (
-              <div className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}>
+              <div
+                className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}
+              >
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >
@@ -147,7 +155,9 @@ const WhyUs = ({ styles }) => {
             className={`ms-24 h-[12vw] min-h-[8rem] w-[12vw] min-w-[8rem] self-start justify-self-start overflow-hidden rounded-[100%] border-4 border-white`}
           >
             {overedItem === 4 ? (
-              <div className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}>
+              <div
+                className={`${styles.opacityAnimation} flex h-full w-full flex-col items-center justify-center bg-white p-4 text-center text-bluTro`}
+              >
                 <h3
                   className={`${roboto.className} font-semibold [font-size:_clamp(.8rem,1.4vw,1.4rem)]`}
                 >

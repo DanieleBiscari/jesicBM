@@ -1,12 +1,15 @@
+"use client"
 import styles from "@/app/styles/contacts.module.css";
 import Image from "next/image";
 import logo from "@/public/img/logo.svg";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Button1 from "@/app/ui/components/button1";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 export default function Page() {
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
   return (
     <div
       className={`${styles.bgMain} mb:pb-0 flex w-full flex-col justify-center gap-16 pb-20 pt-32 md:h-screen md:flex-row md:justify-evenly md:pb-0 md:pt-0`}

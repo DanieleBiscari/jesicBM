@@ -4,9 +4,11 @@ import Image from "next/image";
 import serviceTree1 from "@/public/img/serviceTree1.svg";
 import serviceTree2 from "@/public/img/serviceTree2.svg";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const ServiceWhyUs = ({ styles }) => {
-  const {lang} = useLang()
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   return (
     <div className="flex h-full columns-2 flex-col gap-20 px-4 py-24 lg:flex-row">
@@ -15,7 +17,7 @@ const ServiceWhyUs = ({ styles }) => {
           <h1
             className={`${ibmPlexSans.className} mb-6 font-[700] text-bluTro opacity-50 [font-size:_clamp(1.2rem,2vw,2rem)]`}
           >
-           {lang?.services.senza}
+            {lang?.services.senza}
           </h1>
           <Image
             src={serviceTree1}
@@ -45,24 +47,21 @@ const ServiceWhyUs = ({ styles }) => {
 
             <div className="flex w-[100%] flex-col gap-8 px-4 [font-size:_clamp(.9rem,1.3vw,1.3rem)] lg:w-[60%]">
               <p>
-              {lang?.services.p1}{" "}
-                <b>{lang?.services.p2}</b>
-                {lang?.services.p3}{" "}
-                <b>{lang?.services.p4}</b>{lang?.services.p5} <b>{lang?.services.p6}</b>{lang?.services.p7}{" "}
-                <b>{lang?.services.p8}{" "}</b>{lang?.services.p9}
+                {lang?.services.p1} <b>{lang?.services.p2}</b>
+                {lang?.services.p3} <b>{lang?.services.p4}</b>
+                {lang?.services.p5} <b>{lang?.services.p6}</b>
+                {lang?.services.p7} <b>{lang?.services.p8} </b>
+                {lang?.services.p9}
               </p>
               <p>
-              {lang?.services.p10} <b>{lang?.services.p11} </b>{lang?.services.p12}
+                {lang?.services.p10} <b>{lang?.services.p11} </b>
+                {lang?.services.p12}
               </p>
               <p>
-                <b>
-                {lang?.services.p13}
-                </b>
+                <b>{lang?.services.p13}</b>
               </p>
               <p>
-                <b>
-                {lang?.services.p14}
-                </b>
+                <b>{lang?.services.p14}</b>
               </p>
               <div className="flex">
                 <Button1

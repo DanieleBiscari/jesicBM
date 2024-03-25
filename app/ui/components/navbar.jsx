@@ -6,11 +6,14 @@ import styles from "@/app/styles/navbar.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
+import LanguageChanger from "./languageChanger";
 
 const Navbar = () => {
   const [hamburClicked, setHamburClicked] = useState(false);
   const [windowWidth, setWindowWidth] = useState(undefined);
-  const {lang} = useLang()
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 w-full  justify-between rounded-b-2xl bg-biancoTro px-4 py-5 text-bluTro md:flex md:px-20 ${hamburClicked ? "block" : "flex"}`}
+      className={`fixed z-50 w-full  justify-between rounded-b-2xl bg-biancoTro px-4 py-5 text-bluTro md:flex md:px-14 ${hamburClicked ? "block" : "flex"}`}
     >
       <div
         className={`flex w-full justify-between md:mb-0 md:w-0 ${hamburClicked ? "mb-5" : ""} `}
@@ -99,6 +102,14 @@ const Navbar = () => {
           >
             {lang?.navbar.servizi} PA
           </Link>
+        </li>
+        <li>
+          <div className="ml-6">
+            <LanguageChanger
+              language={language}
+              setLanguage={setLanguage}
+            ></LanguageChanger>
+          </div>
         </li>
       </ul>
     </nav>

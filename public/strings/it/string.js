@@ -5,6 +5,11 @@ const landing = {
   paragraph:
     "Investire nella riqualificazione dei Sobborghi Italiani è una missione per noi molto importante. Non solo per salvaguardare il nostro patrimonio culturale, ma per creare comunità e restituire il loro fascino ai nostri centri storici.",
   button: "Vai alla pagina",
+  valore: "DIAMO VALORE ALLA TUA PRIVACY",
+  text: "Questo sito web utilizza cookie essenziali per offrire un'esperienza piacevole e garantirne il corretto funzionamento. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su \"accetto tutto\" acconsenti l'utilizzo di questi cookie.",
+  btnl: "non accetto",
+  btnr: "accetto",
+  altro: "Leggi altro"
 };
 
 const homepage = {

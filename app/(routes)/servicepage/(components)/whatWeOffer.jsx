@@ -8,9 +8,11 @@ import serviceImg4 from "@/public/img/serviceImg4.png";
 import whatWeOffer from "@/public/img/whatWeOffer.png";
 import CardServiceInPresence from "./cardServiceInPresence";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const WhatWeOffer = ({ styles, clicked, setClicked }) => {
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   function handleClick(name) {
     setClicked(name);
@@ -121,7 +123,7 @@ const WhatWeOffer = ({ styles, clicked, setClicked }) => {
           <video
             controls
             width={920}
-            className="shadow-xl shadow-slate-900 aspect-video"
+            className="aspect-video shadow-xl shadow-slate-900"
             poster="/img/videoPlaceholder.png"
           >
             <source src="/video/video1920.mp4" type="video/mp4" />

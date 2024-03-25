@@ -3,9 +3,11 @@ import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Image from "next/image";
 import backgroundActionPlan from "@/public/img/backgroundActionPlan.png";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const ActionPlan = ({ styles, windowWidth }) => {
-  const {lang} = useLang()
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
   let counter = 0;
   let counterOuter = 0;
   const actionPlan = [

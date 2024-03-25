@@ -1,4 +1,5 @@
 "use client";
+import { useMyContext } from "@/app/contexts/context";
 import useLang from "@/app/hooks/useLang";
 import Button1 from "@/app/ui/components/button1";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
@@ -10,7 +11,8 @@ const Presentation = ({ styles }) => {
   // const languageArray = ["IT", "EN"];
   // const [language, setLanguague] = useState("IT");
   const [animationShowed, setAnimationShowed] = useState(false);
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   // function changeLanguage(currentLanguage) {
   //   languageArray.map((language, _id) => {

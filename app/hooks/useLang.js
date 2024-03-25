@@ -7,14 +7,14 @@ const useLang = (selectedLanguage) => {
     if (typeof navigator !== "undefined" && navigator.language) {
       return navigator.language;
     } else {
-      return "it-IT";
+      return "";
     }
   };
 
   const prefLang = getPreferredLanguage();
-  if (selectedLanguage === "it") {
+  if (selectedLanguage === "it-IT") {
     lang = it;
-  } else if (selectedLanguage === "en") {
+  } else if (selectedLanguage === "en-EN") {
     lang = en;
   } else if (prefLang === "it-IT") {
     lang = it;
@@ -22,7 +22,7 @@ const useLang = (selectedLanguage) => {
     lang = en;
   }
 
-  return { lang };
+  return { lang, prefLang };
 };
 
 export default useLang;

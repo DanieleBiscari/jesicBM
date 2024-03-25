@@ -12,17 +12,21 @@ import Input1 from "./ui/components/input1";
 import Button1 from "./ui/components/button1";
 import CookieModal from "./ui/components/cookieModal";
 import useLang from "./hooks/useLang";
+import { useMyContext } from "./contexts/context";
+import LanguageChanger from "./ui/components/languageChanger";
 // import BannerLanding from "./ui/components/bannerLanding";
 
 export default function LandingPage() {
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   const cities = ["troina"];
   const infoCookieModal = {
-    title: "DIAMO VALORE ALLA TUA PRIVACY",
-    text: 'Questo sito web utilizza cookie essenziali per offrire un\'esperienza piacevole e garantirne il corretto funzionamento. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su "accetto tutto" acconsenti l’utilizzo di questi cookie.',
-    buttonLeftText: "non accettare",
-    buttonRightText: "accetto tutto",
+    title: lang?.landing.valore,
+    text: lang?.landing.text,
+    buttonLeftText: lang?.landing.btnl,
+    buttonRightText: lang?.landing.btnr,
+    otherText: lang?.landing.altro,
     urlToMore: "https://cookieinformation.com/it/che-cose-un-cookie",
   };
   const searchButtonRef = useRef();
@@ -95,17 +99,23 @@ export default function LandingPage() {
         buttonLeftText={infoCookieModal.buttonLeftText}
         buttonRightText={infoCookieModal.buttonRightText}
         urlToMore={infoCookieModal.urlToMore}
+        otherText={infoCookieModal.otherText}
       />
 
       {/* <CookieConsent></CookieConsent> */}
       <div
         className={`${styles.bgLanding} flex w-screen flex-col justify-between md:w-1/2`}
       >
-        <div className=" ml-8 mt-8 flex w-40 items-center justify-center gap-2">
-          <Image src={logo} alt="logo" width={50} height={50} />
-          <h3 className={`${ibmPlexSans.className} leading-4`}>
-            Attrazione Investimenti
-          </h3>
+        <div className="flex w-full items-center justify-between">
+          <div className="ml-8 mt-8 flex w-40 items-center justify-center gap-2">
+            <Image src={logo} alt="logo" width={50} height={50} />
+            <h3 className={`${ibmPlexSans.className} leading-4`}>
+              Attrazione Investimenti
+            </h3>
+          </div>
+          <div className="mr-8 mt-8">
+            <LanguageChanger language={language} setLanguage={setLanguage}></LanguageChanger>
+          </div>
         </div>
 
         <div className="mb-[50vh] mt-8">
@@ -116,7 +126,7 @@ export default function LandingPage() {
                 " mb-8 text-center text-4xl md:text-start"
               }
             >
-              {lang?.landing.where1} <br/> {lang?.landing.where2} 
+              {lang?.landing.where1} <br /> {lang?.landing.where2}
             </h1>
             <div
               className={`${toPageUi ? "hidden" : "flex"} w-full justify-center md:justify-start`}

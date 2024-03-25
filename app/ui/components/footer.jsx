@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import logo from "@/public/img/logo.svg";
@@ -8,18 +8,20 @@ import Link from "next/link";
 import Input1 from "./input1";
 import { useRef } from "react";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const Footer = () => {
   const inputRef = useRef();
-  const {lang} = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
-  function handleSearch(){
-    inputRef.current.value = ""
+  function handleSearch() {
+    inputRef.current.value = "";
   }
 
   return (
-    <footer className="flex w-full flex-wrap items-center justify-center gap-8 xl:gap-32  bg-bluTro px-32 py-16 2xl:justify-between">
-      <div className="flex flex-col items-center 2xl:items-start gap-8">
+    <footer className="flex w-full flex-wrap items-center justify-center gap-8 bg-bluTro  px-32 py-16 xl:gap-32 2xl:justify-between">
+      <div className="flex flex-col items-center gap-8 2xl:items-start">
         <div
           className={`flex gap-4 ${ibmPlexSans.className} flex-col items-center sm:flex-row`}
         >
@@ -89,8 +91,8 @@ const Footer = () => {
           </div>
         </div> */}
         <div className="flex flex-col">
-          <h1 className=" mb-4 text-[1.5rem] font-semibold leading-[1] text-center">
-          {lang?.footer.aggiornato}
+          <h1 className=" mb-4 text-center text-[1.5rem] font-semibold leading-[1]">
+            {lang?.footer.aggiornato}
           </h1>
           <Input1
             placeholder={lang?.footer.placeholder}

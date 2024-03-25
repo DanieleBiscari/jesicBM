@@ -1,10 +1,13 @@
+"use client"
 import styles from "@/app/styles/contacts.module.css";
 import { ebGaramond, ibmPlexSans, roboto } from "@/app/ui/fonts";
 import Button1 from "@/app/ui/components/button1";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 export default function Page() {
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
   return (
     <div
       className={`${styles.bgMain} flex min-h-screen w-full flex-col items-center justify-center pt-28 md:flex-row md:pt-0`}

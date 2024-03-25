@@ -7,9 +7,11 @@ import vision from "@/public/img/vision.svg";
 import etica from "@/public/img/etica.svg";
 import EndSection from "@/app/ui/components/endSection";
 import useLang from "@/app/hooks/useLang";
+import { useMyContext } from "@/app/contexts/context";
 
 const OurTeam = ({ styles, overed, handleOverOurTeam, handleLeaveOurTeam }) => {
-  const { lang } = useLang();
+  const { language, setLanguage } = useMyContext();
+  const { lang } = useLang(language);
 
   return (
     <>

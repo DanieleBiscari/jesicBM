@@ -1,15 +1,20 @@
 const landing = {
-  where1: "Dove vorresti",
+  where1: "inglese",
   where2: "andare?",
   selection: "Seleziona un comune",
   paragraph:
     "Investire nella riqualificazione dei Sobborghi Italiani è una missione per noi molto importante. Non solo per salvaguardare il nostro patrimonio culturale, ma per creare comunità e restituire il loro fascino ai nostri centri storici.",
   button: "Vai alla pagina",
+  valore: "DIAMO VALORE ALLA TUA PRIVACY",
+  text: "Questo sito web utilizza cookie essenziali per offrire un'esperienza piacevole e garantirne il corretto funzionamento. I cookie opzionali vengono utilizzati per migliorare la pagina con delle analisi, facendo clic su \"accetto tutto\" acconsenti l'utilizzo di questi cookie.",
+  btnl: "non accetto",
+  btnr: "accetto",
+  altro: "Leggi altro"
 };
 
 const homepage = {
   description:
-    "Troina, incantevole comune nella provincia di Enna, si distingue per la sua ricca storia e autentica bellezza. Circondato da paesaggi mozzafiato, Troina vanta un patrimonio culturale unico, testimoniato dai suoi antichi monumenti e dalla vivace tradizione locale. Con le sue stradine pittoresche e l'accoglienza calorosa della comunità, Troina è un tesoro nascosto che affascina chiunque abbia il privilegio di esplorarla.",
+    "troy, incantevole comune nella provincia di Enna, si distingue per la sua ricca storia e autentica bellezza. Circondato da paesaggi mozzafiato, Troina vanta un patrimonio culturale unico, testimoniato dai suoi antichi monumenti e dalla vivace tradizione locale. Con le sue stradine pittoresche e l'accoglienza calorosa della comunità, Troina è un tesoro nascosto che affascina chiunque abbia il privilegio di esplorarla.",
   circleTitle1: "Convenienza",
   circleText1:
     "Elevata qualità di vita senza sostenere oneri finanziari eccessivi.",
@@ -29,7 +34,7 @@ const homepage = {
   whyInvest:
     "Troina è molto più di una semplice cittadina dove comprare casa. Il nostro obiettivo è riuscire a riqualificare sostenibilmente il suo centro storico e creare una comunità che possa abbracciare lo stile di vita del luogo, recuperandolo e portando nuovo valore ad una terra con molto potenziale.",
   button: "SCOPRI DI PIÙ →",
-  button2: "I NOSTRI SERVIZI",
+  button2: "I NOSTRI WAFFLE ALLA NUTELLLA",
   nome1: "Angelo",
   cogn1: "Baudo",
   nome2: "Paolo",
@@ -179,7 +184,7 @@ const footer = {
   placeholder: "la tua e-mail",
 };
 
-export const it = {
+export const en = {
   landing,
   homepage,
   services,
