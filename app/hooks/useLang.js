@@ -9,7 +9,7 @@ const useLang = (selectedLanguage) => {
   if (selectedLanguage === "it-IT") {
     lang = it;
     prefLang = "it-IT";
-  } else if (selectedLanguage === "en-EN" || selectedLanguage === "en") {
+  } else if (selectedLanguage === "en-EN" || selectedLanguage === "en" || selectedLanguage === "en-US") {
     lang = en;
     prefLang = "en-EN";
   } else{

@@ -14,13 +14,12 @@ export const MyProvider = ({ children }) => {
       if (typeof navigator !== "undefined" && navigator.language) {
         return navigator.language;
       } else {
-        return "";
+        return "en";
       }
     };
 
     let browserLang = getPreferredLanguage();
-    const { prefLang } = useLang(browserLang);
-    setLanguage(prefLang);
+    setLanguage(browserLang);
   }, []);
 
   return (
