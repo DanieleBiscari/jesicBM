@@ -1,25 +1,20 @@
+"use client"
 import { it } from "@/public/strings/it/string";
 import { en } from "@/public/strings/en/string";
 
 const useLang = (selectedLanguage) => {
   let lang;
-  const getPreferredLanguage = () => {
-    if (typeof navigator !== "undefined" && navigator.language) {
-      return navigator.language;
-    } else {
-      return "";
-    }
-  };
+  let prefLang;
 
-  const prefLang = getPreferredLanguage();
   if (selectedLanguage === "it-IT") {
     lang = it;
-  } else if (selectedLanguage === "en-EN") {
+    prefLang = "it-IT";
+  } else if (selectedLanguage === "en-EN" || selectedLanguage === "en") {
     lang = en;
-  } else if (prefLang === "it-IT") {
+    prefLang = "en-EN";
+  } else{
     lang = it;
-  } else {
-    lang = en;
+    prefLang = "it-IT";
   }
 
   return { lang, prefLang };

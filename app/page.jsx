@@ -135,7 +135,7 @@ export default function LandingPage() {
                 urlImg={suggestionArray.length != 0 ? searchUp : search}
                 searchEffect={handleSearchClick}
                 inputRef={searchButtonRef}
-                placeholder={"Seleziona un comune"}
+                placeholder={lang?.landing.selection}
                 onChangeEffect={handleSuggestionShow}
                 onClickEffect={handleSuggestionShow}
                 onBlurEffect={handleSuggestionHide}
