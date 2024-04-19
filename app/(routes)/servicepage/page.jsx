@@ -16,7 +16,7 @@ export default function Page() {
 
   useEffect(() => {
     const handleResize = () => {
-      const newWindowWidth = window.innerWidth;
+      const newWindowWidth = window.screen.width;
       setWindowWidth(newWindowWidth);
     };
     

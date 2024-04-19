@@ -60,39 +60,39 @@ const ActionPlan = ({ styles, windowWidth }) => {
     <div className="relative h-full w-full">
       <Image
         src={backgroundActionPlan}
-        alt="Immagine di background Traina"
+        alt="Immagine di background Troina"
         width={1051}
         height={830}
         className="absolute right-0 z-0 hidden aspect-auto h-full w-[45rem] lg:block"
       ></Image>
       <h1
-        className={`${ebGaramond.className} relative z-10 mb-8 text-center leading-[100%] text-gialloTro [font-size:_clamp(2.5rem,3.5vw,3.5rem)] md:ml-20 md:text-start`}
+        className={`${ebGaramond.className} relative z-10 mb-8 text-center leading-[100%] text-gialloTro [font-size:_clamp(2.5rem,3.5vw,3.5rem)] lg:ml-20 lg:text-start`}
       >
         <b className=" font-bold">Action plan</b> <br /> Con BM
       </h1>
-      <div className="relative z-30 flex flex-col gap-4 rounded-e-[24px] bg-[#E6E4D9] md:ml-20 lg:w-[90%] lg:p-4 2xl:w-[70%]">
+      <div className="relative z-30  gap-4 rounded-e-[24px] bg-[#E6E4D9] lg:ml-20 lg:w-[90%] lg:p-4 2xl:w-[70%]">
         {actionPlan.map((plan) => {
           counterOuter++;
           return (
             <div key={plan.name}>
-              <div className="flex flex-col items-center text-slate-950 md:flex-row">
+              <div className="flex flex-col items-center gap-4 text-slate-950 lg:flex-row">
                 <h1
-                  className={`${ebGaramond.className} z-10 mb-8 text-center font-[600] text-[#13637E] [font-size:_clamp(1.3rem,1.5vw,1.5rem)] md:mb-0 md:w-[20rem] md:text-start`}
+                  className={`${ebGaramond.className} z-10 mb-8 text-center font-[600] text-[#13637E] [font-size:_clamp(1.3rem,1.5vw,1.5rem)] md:mb-0 md:w-[20rem] lg:text-start`}
                 >
                   {plan.name.toUpperCase()}
                 </h1>
-                <div className="flex w-full flex-col gap-4 md:ml-[-5rem]">
+                <div className="w-full flex flex-col gap-4 lg:ml-[-5rem]">
                   {plan.service.map((service) => {
                     counter++;
                     return (
                       <div
                         key={service.buttonName}
-                        className={`flex flex-col gap-4 md:flex-row md:items-center`}
+                        className={`flex flex-col items-center gap-4 lg:flex-row`}
                       >
                         <div
-                          className="z-10 mx-auto flex w-[20rem] justify-center md:mx-0 md:justify-end"
+                          className="z-10 mx-auto flex w-[20rem] justify-center md:mx-0 lg:justify-end"
                           style={
-                            windowWidth >= 1024
+                            (windowWidth >= 1024) 
                               ? {
                                   marginLeft: `${counter * 50}px`,
                                   opacity: `${counterOuter === 1 ? counterOuter / 1.5 : counterOuter / 2.5}`,
